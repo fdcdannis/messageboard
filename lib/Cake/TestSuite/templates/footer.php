@@ -18,18 +18,7 @@
 ?>	</div>
 		</div>
 		<div id="footer">
-			<p>
-			<!--PLEASE USE ONE OF THE POWERED BY CAKEPHP LOGO-->
-			<a href="https://cakephp.org/" target="_blank">
-				<img src="<?php echo $baseDir; ?>img/cake.power.gif" alt="CakePHP(tm) :: Rapid Development Framework" /></a>
-			</p>
 		</div>
-		<?php
-			App::uses('View', 'View');
-			$null = null;
-			$View = new View($null, false);
-			echo $View->element('sql_dump');
-		?>
 	</div>
 </body>
 </html>
