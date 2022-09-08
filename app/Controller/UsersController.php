@@ -5,23 +5,21 @@ class UsersController extends AppController {
 	public $paginate = array(
         'limit' => 25,
         'conditions' => array('status' => '1'),
-    	'order' => array('User.username' => 'asc' ) 
+    	'order' => array('User.username' => 'asc' )
     );
-	
+
     public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('login','add'); 
+        $this->Auth->allow('login','add');
     }
-	
-
 
 	public function login() {
-		
+
 		//if already logged-in, redirect
 		if($this->Session->check('Auth.User')){
-			$this->redirect(array('action' => 'index'));		
+			$this->redirect(array('action' => 'index'));
 		}
-		
+
 		// if we get the post information, try to authenticate
 		if ($this->request->is('post')) {
 			if ($this->Auth->login()) {
@@ -30,7 +28,7 @@ class UsersController extends AppController {
 			} else {
 				$this->Session->setFlash(__('Invalid username or password'));
 			}
-		} 
+		}
 	}
 
 	public function logout() {
@@ -49,14 +47,14 @@ class UsersController extends AppController {
 
     public function add() {
         if ($this->request->is('post')) {
-				
+
 			$this->User->create();
 			if ($this->User->save($this->request->data)) {
 				$this->Session->setFlash(__('The user has been created'));
 				$this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('The user could not be created. Please, try again.'));
-			}	
+			}
         }
     }
 
@@ -89,12 +87,12 @@ class UsersController extends AppController {
     }
 
     public function delete($id = null) {
-		
+
 		if (!$id) {
 			$this->Session->setFlash('Please provide a user id');
 			$this->redirect(array('action'=>'index'));
 		}
-		
+
         $this->User->id = $id;
         if (!$this->User->exists()) {
             $this->Session->setFlash('Invalid user id provided');
@@ -107,14 +105,14 @@ class UsersController extends AppController {
         $this->Session->setFlash(__('User was not deleted'));
         $this->redirect(array('action' => 'index'));
     }
-	
+
 	public function activate($id = null) {
-		
+
 		if (!$id) {
 			$this->Session->setFlash('Please provide a user id');
 			$this->redirect(array('action'=>'index'));
 		}
-		
+
         $this->User->id = $id;
         if (!$this->User->exists()) {
             $this->Session->setFlash('Invalid user id provided');

@@ -2,9 +2,9 @@
 App::uses('AuthComponent', 'Controller/Component');
 
 class User extends AppModel {
-	
+
 	public $avatarUploadDir = 'img/avatars';
-    
+
 	public $validate = array(
         'username' => array(
             'nonEmpty' => array(
@@ -12,9 +12,9 @@ class User extends AppModel {
                 'message' => 'A username is required',
 				'allowEmpty' => false
             ),
-			'between' => array( 
-				'rule' => array('between', 5, 15), 
-				'required' => true, 
+			'between' => array(
+				'rule' => array('between', 5, 15),
+				'required' => true,
 				'message' => 'Usernames must be between 5 to 15 characters'
 			),
 			 'unique' => array(
@@ -32,11 +32,11 @@ class User extends AppModel {
                 'message' => 'A password is required'
             ),
 			'min_length' => array(
-				'rule' => array('minLength', '6'),  
+				'rule' => array('minLength', '6'),
 				'message' => 'Password must have a mimimum of 6 characters'
 			)
         ),
-		
+
 		'password_confirm' => array(
             'required' => array(
                 'rule' => array('notEmpty'),
@@ -47,18 +47,18 @@ class User extends AppModel {
 				'message' => 'Both passwords must match.'
 			)
         ),
-		
+
 		'email' => array(
 			'required' => array(
-				'rule' => array('email', true),    
-				'message' => 'Please provide a valid email address.'    
+				'rule' => array('email', true),
+				'message' => 'Please provide a valid email address.'
 			),
 			 'unique' => array(
 				'rule'    => array('isUniqueEmail'),
 				'message' => 'This email is already in use',
 			),
-			'between' => array( 
-				'rule' => array('between', 6, 60), 
+			'between' => array(
+				'rule' => array('between', 6, 60),
 				'message' => 'Usernames must be between 6 to 60 characters'
 			)
 		),
@@ -69,11 +69,11 @@ class User extends AppModel {
                 'allowEmpty' => false
             )
         ),
-		
-		
+
+
 		'password_update' => array(
 			'min_length' => array(
-				'rule' => array('minLength', '6'),   
+				'rule' => array('minLength', '6'),
 				'message' => 'Password must have a mimimum of 6 characters',
 				'allowEmpty' => true,
 				'required' => false
@@ -87,9 +87,9 @@ class User extends AppModel {
 			)
         )
 
-		
+
     );
-	
+
 		/**
 	 * Before isUniqueUsername
 	 * @param array $options
@@ -112,12 +112,12 @@ class User extends AppModel {
 
 		if(!empty($username)){
 			if($this->data[$this->alias]['id'] == $username['User']['id']){
-				return true; 
+				return true;
 			}else{
-				return false; 
+				return false;
 			}
 		}else{
-			return true; 
+			return true;
 		}
     }
 
@@ -142,15 +142,15 @@ class User extends AppModel {
 
 		if(!empty($email)){
 			if($this->data[$this->alias]['id'] == $email['User']['id']){
-				return true; 
+				return true;
 			}else{
-				return false; 
+				return false;
 			}
 		}else{
-			return true; 
+			return true;
 		}
     }
-	
+
 	public function alphaNumericDashUnderscore($check) {
         // $data array is passed using the form field name as the key
         // have to extract the value to make the function generic
@@ -159,17 +159,17 @@ class User extends AppModel {
 
         return preg_match('/^[a-zA-Z0-9_ \-]*$/', $value);
     }
-	
-	public function equaltofield($check,$otherfield) 
-    { 
-        //get name of field 
-        $fname = ''; 
-        foreach ($check as $key => $value){ 
-            $fname = $key; 
-            break; 
-        } 
-        return $this->data[$this->name][$otherfield] === $this->data[$this->name][$fname]; 
-    } 
+
+	public function equaltofield($check,$otherfield)
+    {
+        //get name of field
+        $fname = '';
+        foreach ($check as $key => $value){
+            $fname = $key;
+            break;
+        }
+        return $this->data[$this->name][$otherfield] === $this->data[$this->name][$fname];
+    }
 
 	/**
 	 * Before Save
@@ -181,12 +181,12 @@ class User extends AppModel {
 		if (isset($this->data[$this->alias]['password'])) {
 			$this->data[$this->alias]['password'] = AuthComponent::password($this->data[$this->alias]['password']);
 		}
-		
+
 		// if we get a new password, hash it
 		if (isset($this->data[$this->alias]['password_update'])) {
 			$this->data[$this->alias]['password'] = AuthComponent::password($this->data[$this->alias]['password_update']);
 		}
-	
+
 		// fallback to our parent
 		return parent::beforeSave($options);
 	}

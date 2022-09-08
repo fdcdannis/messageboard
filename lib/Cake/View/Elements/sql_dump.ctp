@@ -42,9 +42,9 @@ if ($noLogs || isset($_forced_from_dbo_)):
 		);
 		printf('<caption>(%s) %s %s took %s ms</caption>', $source, $logInfo['count'], $text, $logInfo['time']);
 	?>
-	<!-- <thead>
+	<thead>
 		<tr><th>Nr</th><th>Query</th><th>Error</th><th>Affected</th><th>Num. rows</th><th>Took (ms)</th></tr>
-	</thead> -->
+	</thead>
 	<tbody>
 	<?php
 		foreach ($logInfo['log'] as $k => $i) :
