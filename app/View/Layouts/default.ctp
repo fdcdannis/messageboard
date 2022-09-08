@@ -37,7 +37,18 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 </head>
 <body>
 	<div id="container">
-		<div id="header">
+		<div id="header" class="menu">
+			<div class="login">
+				<?php
+					if($this->Session->check('Auth.User')){
+						echo $this->Html->link( "Logout",   array('action'=>'logout') );
+					}else{
+						echo $this->Html->link( "Register",  array('action'=>'add') );
+						echo $this->Html->link( "Login",   array('action'=>'login') );
+					}
+				?>
+			</div>
+		</div>
 		</div>
 		<div id="content">
 

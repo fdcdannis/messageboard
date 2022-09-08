@@ -27,7 +27,17 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 </head>
 <body>
 	<div id="container">
-		<div id="header">
+		<div id="header" class="menu">
+			<div class="login">
+				<?php
+					if($this->Session->check('Auth.User')){
+						echo $this->Html->link( "Logout",   array('action'=>'logout') );
+					}else{
+						echo $this->Html->link( "Register",  array('action'=>'add') );
+						echo $this->Html->link( "Login",   array('action'=>'login') );
+					}
+				?>
+			</div>
 		</div>
 		<div id="content">
 
