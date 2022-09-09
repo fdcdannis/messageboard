@@ -755,16 +755,31 @@ pre {
 	color: #ffffff;
     text-decoration: none;
     margin-left: 20px;
-    padding-right: 20px;
+    padding-right: 30px;
 }
 #header.menu {
-    padding: 20px 50px;
+	padding: 20px 50px;
     background: #3e3636;
+    display: flex;
+    position: relative;
 }
 #header .login {
-    width: 100%;
+	width: auto;
     text-align: right;
     margin: 20px;
+    right: 0;
+    position: absolute;
+    bottom: 4px;
+}
+#header .logo > a {
+    text-decoration: none;
+    font-size: 20px;
+}
+#header .logo > span {
+    font-size: 22px;
+    font-weight: 700;
+    position: relative;
+    top: 15px;
 }
 
 .users-form > form {
@@ -782,4 +797,44 @@ form div.submit {
 }
 form div.submit > input {
     cursor: pointer;
+}
+.user-name {
+	font-weight: 700;
+}
+.users-form.thank-you {
+	width: auto;
+    max-width: 733px;
+    margin: 0 auto;
+    padding: 60px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    margin-top: 60px;
+}
+.users-form.thank-you h1 {
+    font-size: 50px;
+    font-weight: 700;
+}
+.users-form.thank-you .btn-default {
+    width: 200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #3e3636;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 60px;
+}
+.users-form.thank-you .btn-default:hover {
+    background: #c63535;
+}
+.users-form.thank-you .btn-default > a {
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+
+/** Custom CSS **/
+.fw-700 {
+	font-weight: 700;
 }

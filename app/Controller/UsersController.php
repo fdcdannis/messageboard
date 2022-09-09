@@ -2,16 +2,20 @@
 
 class UsersController extends AppController {
 
-	public $paginate = array(
-        'limit' => 25,
-        'conditions' => array('status' => '1'),
-    	'order' => array('User.username' => 'asc' )
-    );
+	// public $paginate = array(
+    //     'limit' => 25,
+    //     'conditions' => array('status' => '1'),
+    // 	'order' => array('User.name' => 'asc' )
+    // );
 
     public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('login','add');
+        $this->Auth->allow('login','add', 'thankyou');
     }
+
+	public function thankyou() {
+		//if already logged-in, redirect
+	}
 
 	public function login() {
 
@@ -20,13 +24,18 @@ class UsersController extends AppController {
 			$this->redirect(array('action' => 'index'));
 		}
 
-		// if we get the post information, try to authenticate
-		if ($this->request->is('post')) {
-			if ($this->Auth->login()) {
-				$this->Session->setFlash(__('Welcome, '. $this->Auth->user('username')));
-				$this->redirect($this->Auth->redirectUrl());
+		if($this->request->is('post')) {
+			App::Import('Utility', 'Validation');
+			if( isset($this->data['User']['username']) && 
+			Validation::email($this->data['User']['username'])) {
+				$this->request->data['User']['email'] = $this->data['User']['username'];
+				$this->Auth->authenticate['Form'] = array('fields' => array('username' => 'email'));
+			}
+
+			if($this->Auth->login()) {
+				$this->redirect($this->Auth->redirect());
 			} else {
-				$this->Session->setFlash(__('Invalid username or password'));
+				$this->Session->setFlash(__('Invalid email or password, try again'));
 			}
 		}
 	}
@@ -38,7 +47,7 @@ class UsersController extends AppController {
     public function index() {
 		$this->paginate = array(
 			'limit' => 6,
-			'order' => array('User.username' => 'asc' )
+			'order' => array('User.name' => 'asc' )
 		);
 		$users = $this->paginate('User');
 		$this->set(compact('users'));
@@ -50,8 +59,8 @@ class UsersController extends AppController {
 
 			$this->User->create();
 			if ($this->User->save($this->request->data)) {
-				$this->Session->setFlash(__('The user has been created'));
-				$this->redirect(array('action' => 'index'));
+				// $this->Session->setFlash(__('The user has been created'));
+				$this->redirect(array('action' => 'thankyou'));
 			} else {
 				$this->Session->setFlash(__('The user could not be created. Please, try again.'));
 			}

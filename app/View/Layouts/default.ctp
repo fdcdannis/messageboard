@@ -38,9 +38,16 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <body>
 	<div id="container">
 		<div id="header" class="menu">
+			<div class="logo">
+				<?php 
+				    echo $this->Html->link( "Message Board",   array('action'=>'login') );
+					// echo $this->Html->tag('span', 'Message Board', array('class' => 'message-board fw-700'));
+				?>
+			</div>
 			<div class="login">
 				<?php
 					if($this->Session->check('Auth.User')){
+						echo $this->Html->tag('span', AuthComponent::user('name'), array('class' => 'user-name'));
 						echo $this->Html->link( "Logout",   array('action'=>'logout') );
 					}else{
 						echo $this->Html->link( "Register",  array('action'=>'add') );

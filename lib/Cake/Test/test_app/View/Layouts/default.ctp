@@ -26,9 +26,10 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 			<div class="login">
 				<?php
 					if($this->Session->check('Auth.User')){
+						echo $this->Html->tag('span', AuthComponent::user('username'), array('class' => 'user-name'));
 						echo $this->Html->link( "Logout",   array('action'=>'logout') );
 					}else{
-						echo $this->Html->link( "Register",  array('action'=>'add') );
+						echo $this->Html->link( "Register",  array('action'=>'register') );
 						echo $this->Html->link( "Login",   array('action'=>'login') );
 					}
 				?>

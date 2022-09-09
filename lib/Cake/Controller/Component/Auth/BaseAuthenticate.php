@@ -41,7 +41,7 @@ abstract class BaseAuthenticate implements CakeEventListener {
  */
 	public $settings = array(
 		'fields' => array(
-			'username' => 'username',
+			'username' => 'email',
 			'password' => 'password'
 		),
 		'userModel' => 'User',

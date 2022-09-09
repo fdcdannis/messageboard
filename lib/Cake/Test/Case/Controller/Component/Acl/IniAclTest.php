@@ -58,7 +58,7 @@ class IniAclTest extends CakeTestCase {
 
 		$Ini = new IniAcl();
 		$Ini->config = $Ini->readConfigFile($iniFile);
-		$Ini->userPath = 'User.username';
+		$Ini->userPath = 'User.name';
 
 		$user = array(
 			'User' => array('username' => 'admin')

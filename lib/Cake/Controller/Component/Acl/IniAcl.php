@@ -38,7 +38,7 @@ class IniAcl extends CakeObject implements AclInterface {
  *
  * @var string
  */
-	public $userPath = 'User.username';
+	public $userPath = 'User.name';
 
 /**
  * Initialize method

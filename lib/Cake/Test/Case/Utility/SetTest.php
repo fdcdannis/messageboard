@@ -1510,7 +1510,7 @@ class SetTest extends CakeTestCase {
 			)
 		);
 
-		$result = Set::extract($a, '{n}.Article.User.username');
+		$result = Set::extract($a, '{n}.Article.User.name');
 		$expected = array('mariano.iglesias', 'mariano.iglesias', 'phpnut');
 		$this->assertEquals($expected, $result);
 
