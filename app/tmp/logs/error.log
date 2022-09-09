@@ -483,3 +483,12 @@ Request URL: /messageboard/thankyou
 Stack Trace:
 #0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2022-09-09 09:44:03 Error: [MissingControllerException] Controller class ThankyouController could not be found.
+Exception Attributes: array (
+  'class' => 'ThankyouController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/thankyou
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

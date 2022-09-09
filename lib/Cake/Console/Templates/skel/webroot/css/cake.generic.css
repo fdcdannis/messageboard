@@ -268,9 +268,9 @@ fieldset {
 	padding: 16px 10px;
 }
 fieldset legend {
-	color: #e32;
-	font-size: 160%;
-	font-weight: bold;
+	color: #3e3636;
+    font-size: 160%;
+    font-weight: bold;
 }
 fieldset fieldset {
 	margin-top: 0;
@@ -356,17 +356,17 @@ input[type=submit] {
 	width: auto;
 }
 form .submit input[type=submit] {
-	background:#62af56;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#76BF6B), to(#3B8230));
-	background-image: -webkit-linear-gradient(top, #76BF6B, #3B8230);
-	background-image: -moz-linear-gradient(top, #76BF6B, #3B8230);
-	border-color: #2d6324;
+	background:#3e3636;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#3e3636), to(#3B8230));
+	background-image: -webkit-linear-gradient(top, #3e3636, #3e3636);
+	background-image: -moz-linear-gradient(top, #3e3636, #3e3636);
+	border-color: #3e3636;
 	color: #fff;
 	text-shadow: rgba(0, 0, 0, 0.5) 0 -1px 0;
 	padding: 8px 10px;
 }
 form .submit input[type=submit]:hover {
-	background: #5BA150;
+	background: #3e3636;
 }
 /* Form errors */
 form .error {

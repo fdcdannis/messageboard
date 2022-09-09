@@ -15,6 +15,9 @@ class UsersController extends AppController {
 
 	public function thankyou() {
 		//if already logged-in, redirect
+		if($this->Session->check('Auth.User')){
+			$this->redirect(array('action' => 'index'));
+		}
 	}
 
 	public function login() {
@@ -25,12 +28,8 @@ class UsersController extends AppController {
 		}
 
 		if($this->request->is('post')) {
-			App::Import('Utility', 'Validation');
-			if( isset($this->data['User']['username']) && 
-			Validation::email($this->data['User']['username'])) {
-				$this->request->data['User']['email'] = $this->data['User']['username'];
-				$this->Auth->authenticate['Form'] = array('fields' => array('username' => 'email'));
-			}
+
+			// $this->Auth->authenticate['Form'] = array('fields' => array('username' => 'email'));
 
 			if($this->Auth->login()) {
 				$this->redirect($this->Auth->redirect());
@@ -53,10 +52,8 @@ class UsersController extends AppController {
 		$this->set(compact('users'));
     }
 
-
     public function add() {
         if ($this->request->is('post')) {
-
 			$this->User->create();
 			if ($this->User->save($this->request->data)) {
 				// $this->Session->setFlash(__('The user has been created'));
