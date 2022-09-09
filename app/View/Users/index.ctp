@@ -1,68 +1,33 @@
-<div class="users-form">
-<h1>Users</h1>
 
 
+<div class="users-form user-profile">
 
+	<!-- Picture and Details -->
+	<div class="pic-details">
+		<!-- Picture -->
+		<div class="picture">
+			<?php echo $this->Html->image(AuthComponent::user('profile_pic'), array('height' => '250', 'width' => '250', 'fullBase' => true, 'plugin' => false)); ?>
+		</div>
 
+		<!-- Details -->
+		<div class="details">
+			<div class="full-name">
+				<?php echo $this->Html->tag('span', AuthComponent::user('firstname'), array('class' => 'user-firstname')); ?>,
+				<?php echo $this->Html->tag('span', AuthComponent::user('lastname'), array('class' => 'user-lastname')); ?>
+				<?php echo $this->Html->tag('span', AuthComponent::user('age'), array('class' => 'user-age')); ?>
+			</div>
+			<div class="">
+				<?php echo $this->Html->tag('p', 'Gender: '. AuthComponent::user('gender'), array('class' => 'user-age')); ?>
+				<?php echo $this->Html->tag('p', 'Birthday:'. AuthComponent::user('birthday'), array('class' => 'user-age')); ?>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <table>
-    <thead>
-		<tr>
-			<th><?php echo $this->Form->checkbox('all', array('name' => 'CheckAll',  'id' => 'CheckAll')); ?></th>
-			<th><?php echo $this->Paginator->sort('username', 'Username');?>  </th>
-			<th><?php echo $this->Paginator->sort('email', 'E-Mail');?></th>
-			<th><?php echo $this->Paginator->sort('created', 'Created');?></th>
-			<th><?php echo $this->Paginator->sort('modified','Last Update');?></th>
-			<th><?php echo $this->Paginator->sort('role','Role');?></th>
-			<th><?php echo $this->Paginator->sort('status','Status');?></th>
-			<th>Actions</th>
-		</tr>
-	</thead>
-	<tbody>
-		<?php $count=0; ?>
-		<?php foreach($users as $user): ?>
-		<?php $count ++;?>
-		<?php if($count % 2): echo '<tr>'; else: echo '<tr class="zebra">' ?>
-		<?php endif; ?>
-			<td><?php echo $this->Form->checkbox('User.id.'.$user['User']['id']); ?></td>
-			<td><?php echo $this->Html->link( $user['User']['username']  ,   array('action'=>'edit', $user['User']['id']),array('escape' => false) );?></td>
-			<td style="text-align: center;"><?php echo $user['User']['email']; ?></td>
-			<td style="text-align: center;"><?php echo $this->Time->niceShort($user['User']['created']); ?></td>
-			<td style="text-align: center;"><?php echo $this->Time->niceShort($user['User']['modified']); ?></td>
-			<td style="text-align: center;"><?php echo $user['User']['role']; ?></td>
-			<td style="text-align: center;"><?php echo $user['User']['status']; ?></td>
-			<td >
-			<?php echo $this->Html->link(    "Edit",   array('action'=>'edit', $user['User']['id']) ); ?> |
-			<?php
-				if( $user['User']['status'] != 0){
-					echo $this->Html->link(    "Delete", array('action'=>'delete', $user['User']['id']));}else{
-					echo $this->Html->link(    "Re-Activate", array('action'=>'activate', $user['User']['id']));
-					}
-			?>
-			</td>
-		</tr>
-		<?php endforeach; ?>
-		<?php unset($user); ?>
-	</tbody>
-</table>
-<?php echo $this->Paginator->prev('<< ' . __('previous', true), array(), null, array('class'=>'disabled'));?>
-<?php echo $this->Paginator->numbers(array(   'class' => 'numbers'     ));?>
-<?php echo $this->Paginator->next(__('next', true) . ' >>', array(), null, array('class' => 'disabled'));?> -->
+				<?php echo $this->Html->tag('p', 'Joined:'. AuthComponent::user('created'), array('class' => 'user-age')); ?>
+				<?php echo $this->Html->tag('p', 'Last Login:'. AuthComponent::user('modified'), array('class' => 'user-age')); ?>
+			</div>
+		</div>
+	</div>
+	<!-- Hobby -->
+	<div class="hubby">
+		<?php echo $this->Html->tag('p', 'Hobby:', array('class' => 'user-hobby')); ?>
+		<?php echo $this->Html->tag('p', AuthComponent::user('hobby'), array('class' => 'user-hobby')); ?>
+	</div>
 </div>

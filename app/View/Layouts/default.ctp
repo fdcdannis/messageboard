@@ -39,10 +39,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<div id="container">
 		<div id="header" class="menu">
 			<div class="logo">
-				<?php 
-				    echo $this->Html->link( "Message Board",   array('action'=>'login') );
-					// echo $this->Html->tag('span', 'Message Board', array('class' => 'message-board fw-700'));
-				?>
+				<?php echo $this->Html->link( "Message Board",   array('action'=>'login') ); ?>
 			</div>
 			<div class="login">
 				<?php
