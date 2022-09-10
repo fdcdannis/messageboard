@@ -799,7 +799,9 @@ form div.submit > input {
     cursor: pointer;
 }
 .user-name {
-	font-weight: 700	;
+    font-weight: 700;
+    border-right: 1px solid white;
+    padding-right: 25px;
 }
 .users-form.thank-you {
 	width: auto;
@@ -875,7 +877,7 @@ form div.submit > input {
     margin-left: 20px;
 }
 .full-name > span {
-    font-size: 30px;
+    font-size: 25px;
 }
 .user-age {
     margin-left: 15px;

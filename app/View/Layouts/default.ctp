@@ -44,7 +44,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			<div class="login">
 				<?php
 					if($this->Session->check('Auth.User')){
-						echo $this->Html->tag('span', AuthComponent::user('name'), array('class' => 'user-name'));
+						echo $this->Html->link( AuthComponent::user('name'),   array('action'=>'myprofile') );
 						echo $this->Html->link( "Logout",   array('action'=>'logout') );
 					}else{
 						echo $this->Html->link( "Register",  array('action'=>'add') );

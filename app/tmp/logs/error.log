@@ -805,3 +805,126 @@ Stack Trace:
 #4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
 #5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #6 {main}
+2022-09-10 20:26:29 Error: [MissingControllerException] Controller class MyprofileController could not be found.
+Exception Attributes: array (
+  'class' => 'MyprofileController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/myprofile
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-10 20:28:14 Error: [MissingControllerException] Controller class DashboardsController could not be found.
+Exception Attributes: array (
+  'class' => 'DashboardsController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/dashboards
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-10 20:31:32 Error: [MissingControllerException] Controller class DashboardsController could not be found.
+Exception Attributes: array (
+  'class' => 'DashboardsController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/dashboards
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-10 20:33:09 Error: [MissingActionException] Action UsersController::myprofile() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'myprofile',
+)
+Request URL: /messageboard/myprofile
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2022-09-10 20:33:19 Error: [MissingControllerException] Controller class DashboardController could not be found.
+Exception Attributes: array (
+  'class' => 'DashboardController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/dashboard
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-10 20:33:24 Error: [MissingControllerException] Controller class DashboardController could not be found.
+Exception Attributes: array (
+  'class' => 'DashboardController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/dashboard/logout
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-10 20:33:27 Error: [MissingControllerException] Controller class DashboardController could not be found.
+Exception Attributes: array (
+  'class' => 'DashboardController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/dashboard/logout
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-10 20:33:31 Error: [MissingControllerException] Controller class DashboardController could not be found.
+Exception Attributes: array (
+  'class' => 'DashboardController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/dashboard/logout
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-10 20:34:11 Error: [MissingControllerException] Controller class DashboardController could not be found.
+Exception Attributes: array (
+  'class' => 'DashboardController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/dashboard
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-10 20:35:21 Error: [MissingControllerException] Controller class DashboardController could not be found.
+Exception Attributes: array (
+  'class' => 'DashboardController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/dashboard
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-10 20:35:25 Error: [MissingControllerException] Controller class DashboardssController could not be found.
+Exception Attributes: array (
+  'class' => 'DashboardssController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/dashboardss
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-10 20:36:07 Error: [MissingActionException] Action UsersController::myprofile() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'myprofile',
+)
+Request URL: /messageboard/myprofile
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2022-09-10 20:39:44 Error: [MissingActionException] Action UsersController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'index',
+)
+Request URL: /messageboard/dashboards
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

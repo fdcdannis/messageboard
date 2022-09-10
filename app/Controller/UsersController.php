@@ -20,6 +20,13 @@ class UsersController extends AppController {
 		}
 	}
 
+	public function myprofile() {
+		//if already logged-in, redirect
+		// if($this->Session->check('Auth.User')){
+		// 	$this->redirect(array('action' => 'index'));
+		// }
+	}
+
 	public function login() {
 
 		//if already logged-in, redirect
@@ -44,12 +51,12 @@ class UsersController extends AppController {
 	}
 
     public function index() {
-		$this->paginate = array(
-			'limit' => 6,
-			'order' => array('User.name' => 'asc' )
-		);
-		$users = $this->paginate('User');
-		$this->set(compact('users'));
+		// $this->paginate = array(
+		// 	'limit' => 6,
+		// 	'order' => array('User.name' => 'asc' )
+		// );
+		// $users = $this->paginate('User');
+		// $this->set(compact('users'));
     }
 
     public function add() {
@@ -109,26 +116,6 @@ class UsersController extends AppController {
             $this->redirect(array('action' => 'index'));
         }
         $this->Session->setFlash(__('User was not deleted'));
-        $this->redirect(array('action' => 'index'));
-    }
-
-	public function activate($id = null) {
-
-		if (!$id) {
-			$this->Session->setFlash('Please provide a user id');
-			$this->redirect(array('action'=>'index'));
-		}
-
-        $this->User->id = $id;
-        if (!$this->User->exists()) {
-            $this->Session->setFlash('Invalid user id provided');
-			$this->redirect(array('action'=>'index'));
-        }
-        if ($this->User->saveField('status', 1)) {
-            $this->Session->setFlash(__('User re-activated'));
-            $this->redirect(array('action' => 'index'));
-        }
-        $this->Session->setFlash(__('User was not re-activated'));
         $this->redirect(array('action' => 'index'));
     }
 
