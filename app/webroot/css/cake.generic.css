@@ -781,6 +781,9 @@ pre {
     position: relative;
     top: 15px;
 }
+#header .login > a:first-child {
+    border-right: 1px solid #fff;
+}
 
 .users-form > form {
 	width: 500px;
@@ -789,6 +792,27 @@ pre {
     padding: 30px;
     border: 1px solid #d2d2d2;
     border-radius: 15px;
+}
+
+.users-form.edit-profile {
+    width: 800px;
+    padding: 50px;
+    border: 1px solid #d5d5d5;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.users-form.edit-profile > form {
+	width: 100%;
+    margin: unset;
+    margin-top: unset;
+    padding: unset;
+    border: unset;
+    border-radius: unset;
+}
+.hubby > textarea {
+    width: 100%;
+    height: 300px;
 }
 
 /** Added CSS **/
@@ -853,7 +877,7 @@ form div.submit > input {
     font-size: 20px;
 }
 .users-form.user-profile {
-	width: 530px;
+	width: 800px;
     padding: 50px;
     border: 1px solid #d5d5d5;
     border-radius: 10px;
@@ -874,7 +898,7 @@ form div.submit > input {
 .full-name {
     margin-bottom: 30px;
     font-weight: 700;
-    margin-left: 20px;
+	font-size: 25px;
 }
 .full-name > span {
     font-size: 25px;
@@ -882,3 +906,105 @@ form div.submit > input {
 .user-age {
     margin-left: 15px;
 }
+.user-info span {
+    font-weight: 600;
+}
+
+.edit-profile {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.edit-profile > a > div {
+    padding: 15px 25px;
+    background: #3e3636;
+    width: 90px;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.submit-profile > div > input {
+	padding: 15px 25px !important;
+    background: #3e3636 !important;
+    width: auto;
+    text-align: center;
+    border-radius: 5px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.submit-profile {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.user-info #UserUpload {
+    display: none;
+}
+
+.upload-photo label {
+    padding: 6px 8px;
+    background: #dbdbdb;
+    text-align: center;
+    width: 94px;
+    color: black;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid #c1b4b4;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+/** Margins **/
+.ml-0 { margin-left: 0 }
+.ml-5 { margin-left: 5px }
+.ml-10 { margin-left: 10px }
+.ml-15 { margin-left: 15px }
+.ml-20 { margin-left: 20px }
+.ml-25 { margin-left: 25px }
+.ml-30 { margin-left: 30px }
+.ml-35 { margin-left: 35px }
+.ml-40 { margin-left: 40px }
+.ml-45 { margin-left: 45px }
+.ml-50 { margin-left: 50px }
+
+.mr-0 { margin-right: 0 }
+.mr-5 { margin-right: 5px }
+.mr-10 { margin-right: 10px }
+.mr-15 { margin-right: 15px }
+.mr-20 { margin-right: 20px }
+.mr-25 { margin-right: 25px }
+.mr-30 { margin-right: 30px }
+.mr-35 { margin-right: 35px }
+.mr-40 { margin-right: 40px }
+.mr-45 { margin-right: 45px }
+.mr-50 { margin-right: 50px }
+
+.mb-0 { margin-bottom: 0 }
+.mb-5 { margin-bottom: 5px }
+.mb-10 { margin-bottom: 10px }
+.mb-15 { margin-bottom: 15px }
+.mb-20 { margin-bottom: 20px }
+.mb-25 { margin-bottom: 25px }
+.mb-30 { margin-bottom: 30px }
+.mb-35 { margin-bottom: 35px }
+.mb-40 { margin-bottom: 40px }
+.mb-45 { margin-bottom: 45px }
+.mb-50 { margin-bottom: 50px }
+
+.mt-0 { margin-top: 0 }
+.mt-5 { margin-top: 5px }
+.mt-10 { margin-top: 10px }
+.mt-15 { margin-top: 15px }
+.mt-20 { margin-top: 20px }
+.mt-25 { margin-top: 25px }
+.mt-30 { margin-top: 30px }
+.mt-35 { margin-top: 35px }
+.mt-40 { margin-top: 40px }
+.mt-45 { margin-top: 45px }
+.mt-50 { margin-top: 50px }

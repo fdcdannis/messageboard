@@ -34,6 +34,10 @@
 
 	/** My Profile */
 	Router::connect('/myprofile', array('controller' => 'users', 'action' => 'myprofile'));
+	Router::connect('/myprofile/edit', array('controller' => 'users', 'action' => 'edit'));
+
+	/** My Profile */
+	Router::connect('/register', array('controller' => 'users', 'action' => 'register'));
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
  */

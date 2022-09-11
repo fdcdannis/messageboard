@@ -47,7 +47,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 						echo $this->Html->link( AuthComponent::user('name'),   array('action'=>'myprofile') );
 						echo $this->Html->link( "Logout",   array('action'=>'logout') );
 					}else{
-						echo $this->Html->link( "Register",  array('action'=>'add') );
+						echo $this->Html->link( "Register",  array('action'=>'register') );
 						echo $this->Html->link( "Login",   array('action'=>'login') );
 					}
 				?>

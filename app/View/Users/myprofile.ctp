@@ -1,31 +1,38 @@
 <div class="users-form user-profile">
+	<!-- Edit Profile Button -->
+	<div class="edit-profile">
+		<?php
+			echo $this->Html->link(
+				 $this->Html->tag('div', "Edit Profile", array('class' => '')),
+				 array('action'=>'edit', $user['User']['id']),
+				 array('escape' => false)
+			);
+		?>
+	</div>
 
 	<!-- Picture and Details -->
 	<div class="pic-details">
 		<!-- Picture -->
 		<div class="picture">
-			<?php echo $this->Html->image(AuthComponent::user('profile_pic'), array('height' => '250', 'width' => '250', 'fullBase' => true, 'plugin' => false)); ?>
+			<?php echo $this->Html->image($user['User']['profile_pic'], array('height' => '250', 'width' => '250', 'fullBase' => true, 'plugin' => false)); ?>
 		</div>
 
 		<!-- Details -->
 		<div class="details">
 			<div class="full-name">
-				<?php echo $this->Html->tag('span', AuthComponent::user('lastname'), array('class' => 'user-firstname')); ?>,
-				<?php echo $this->Html->tag('span', AuthComponent::user('firstname'), array('class' => 'user-lastname')); ?>
-				<?php echo $this->Html->tag('span', AuthComponent::user('age'), array('class' => 'user-age')); ?>
+				<?php echo $user['User']['lastname'].', '.$user['User']['firstname'].' '.$user['User']['age']; ?>
 			</div>
-			<div class="">
-				<?php echo $this->Html->tag('p', 'Gender: '. AuthComponent::user('gender'), array('class' => 'user-age')); ?>
-				<?php echo $this->Html->tag('p', 'Birthday:'. AuthComponent::user('birthday'), array('class' => 'user-age')); ?>
-
-				<?php echo $this->Html->tag('p', 'Joined:'. AuthComponent::user('created'), array('class' => 'user-age')); ?>
-				<?php echo $this->Html->tag('p', 'Last Login:'. AuthComponent::user('modified'), array('class' => 'user-age')); ?>
+			<div class="user-info">
+				<p class=""><span class=""> Gender: </span><?php echo $user['User']['gender'] ?></p>
+				<p class=""><span class=""> Birthday: </span><?php echo $user['User']['birthday'] ?></p>
+				<p class=""><span class=""> Joined: </span><?php echo $user['User']['created'] ?></p>
+				<p class=""><span class=""> Last Login: </span><?php echo $user['User']['modified'] ?></p>
 			</div>
 		</div>
 	</div>
 	<!-- Hobby -->
 	<div class="hubby">
 		<?php echo $this->Html->tag('p', 'Hobby:', array('class' => 'user-hobby')); ?>
-		<?php echo $this->Html->tag('p', AuthComponent::user('hobby'), array('class' => 'user-hobby')); ?>
+		<?php echo $this->Html->tag('p', $user['User']['hobby'], array('class' => 'user-hobby')); ?>
 	</div>
 </div>
