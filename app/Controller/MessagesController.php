@@ -17,72 +17,78 @@ class MessagesController extends AppController {
 
         $user_id = AuthComponent::user('id');
 
-        $messages = $this->Message->find('all', array(
-            'joins' => array(
-                array(
-                    'table' => 'users',
-                    'alias' => 'User',
-                    'type' => 'INNER',
-                    'conditions' => array(
-                        "AND" => array(
-                            array('Message.message_from_user_id' => $user_id),
-                            array('User.id = Message.message_from_user_id')
-                        )
-                    )
-                )
-            ),
-            'conditions' => array(
-                "OR" => array(
-                    // 'User.id = Message.message_to_userid',
-                    // 'Message.message_to_userid' => $user_id
-                )
-            ),
-            'fields' => array('User.*', 'Message.*'),
-            // 'order' => 'Message.datetime DESC'
-        ));
+		// pr($user_id);
+
+		// $messages = $this->Message->query("
+		// 		SELECT  *
+		// 		FROM    Messages AS Message
+		// 		JOIN    Users AS User
+		// 		ON Message.message_from_user_id = $user_id AND User.id = Message.message_from_user_id AND Message.reply_flag = 0
+		// 		UNION
+		// 		SELECT  *
+		// 		FROM    Messages AS Message
+		// 		JOIN    Users AS User
+		// 		ON Message.message_to_userid = $user_id AND User.id = Message.message_from_user_id AND Message.reply_flag = 0
+		// ");
+
+		$messages = $this->Message->query("
+				SELECT  *
+				FROM    Users AS User
+				JOIN    Messages AS Message
+				ON Message.message_from_user_id = $user_id AND User.id = Message.message_from_user_id AND Message.reply_flag = 0
+				UNION
+				SELECT  *
+				FROM    Users AS User
+				JOIN    Messages AS Message
+				ON Message.message_to_userid = $user_id AND User.id = Message.message_from_user_id AND Message.reply_flag = 0
+		");
 
         // pr($messages);
 		$this->set(compact('messages'));
     }
 
 
-    public function reply($id = null) {
+    public function reply($id = null, $to_user_id = null, $from_user_id = null) {
+
+		$user_id = AuthComponent::user('id');
+
+		// pr($id);
+		// pr($to_user_id);
+		// pr($from_user_id);
 
 		if (!$id) {
 			$this->Session->setFlash('Please provide a user id');
 			$this->redirect(array('action'=>'index'));
 		}
 
-		$messages = $this->Message->find('all', array(
-            'joins' => array(
-                array(
-                    'table' => 'users',
-                    'alias' => 'User',
-                    'type' => 'INNER',
-                    'conditions' => array(
-                        "AND" => array(
-                            array('Message.id' => $id),
-                            array('Message.message_from_user_id = User.id')
-                        )
-                    )
-                )
-            ),
-            'conditions' => array(
-                "OR" => array(
-                    // 'Message.message_id' => $id,
-                )
-            ),
-            'fields' => array('User.*', 'Message.*'),
-            // 'order' => 'Message.datetime DESC'
-        ));
-		// pr($message);
+		$messages = $this->Message->query("
+				SELECT  *
+				FROM    Messages AS Message
+				JOIN    Users AS User
+				ON Message.message_from_user_id = $user_id AND User.id = Message.message_from_user_id AND (Message.id = $id OR Message.reply_id = $id)
+				UNION
+				SELECT  *
+				FROM    Messages AS Message
+				JOIN    Users AS User
+				ON Message.message_to_userid = $user_id AND User.id = Message.message_from_user_id AND (Message.id = $id OR Message.reply_id = $id)
+		");
+
+        // pr($messages);
 
 		if ($this->request->is('post')) {
 			$this->Message->create();
 
 			$this->request->data['Message']['reply_flag'] = 1;
 			$this->request->data['Message']['reply_id'] = $id;
-			$this->request->data['Message']['reply_to_user_id'] = $message;
+			$this->request->data['Message']['message_id'] = $id;
+
+			$this->request->data['Message']['message_from_user_id'] = $user_id;
+
+			if($to_user_id == $user_id){
+				$this->request->data['Message']['message_to_userid'] = $from_user_id;
+			} else {
+				$this->request->data['Message']['message_to_userid'] = $to_user_id;
+			}
 
 			if ($this->Message->save($this->request->data)) {
 				$this->Session->setFlash(__('The user has been created'));
@@ -90,17 +96,17 @@ class MessagesController extends AppController {
 				$this->Session->setFlash(__('The user could not be created. Please, try again.'));
 			}
         }
-		pr($messages);
 
 		$this->set(compact('messages'));
     }
 
 	public function newmessage() {
-		$user = $this->Auth->user('id');;
+		$user_id = $this->Auth->user('id');;
 		if ($this->request->is('post')) {
 			$this->Message->create();
 
-			$this->request->data['Message']['message_from_user_id'] = $user;
+			// $this->request->data['Message']['message_id'] = $user_id;
+			$this->request->data['Message']['message_from_user_id'] = $user_id;
 
 			pr($this->request->data);
 

@@ -12,24 +12,34 @@
 	</div>
 
 	<?php foreach($messages as $message): ?>
-	<a href="/messageboard/messages/reply/<?php echo $message['Message']['id'] ?>">
-		<div class="message-list">
-				<!-- Message Picture -->
-				<div class="message-pic">
-					<?php echo $this->Html->image($message['User']['profile_pic'], array('height' => '200', 'width' => '200', 'fullBase' => true, 'plugin' => false)); ?>
-				</div>
+		<a href="/messageboard/messages/reply/<?php echo $message['0']['id'] ?>/<?php echo $message['0']['message_to_userid'] ?>/<?php echo $message['0']['message_from_user_id'] ?>">
+			<div class="message-list">
 
-				<!-- Message Details -->
-				<div class="message-details">
-					<div class="message-user">
-						<p class=""><span class=""><?php echo $message['Message']['message_details'] ?></p>
+					<?php if($message['0']['message_from_user_id'] == AuthComponent::user('id')) { ?>
+						<!-- Message Picture -->
+						<div class="message-pic">
+							<?php echo $this->Html->image($message['0']['profile_pic'], array('height' => '200', 'width' => '200', 'fullBase' => true, 'plugin' => false)); ?>
+						</div>
+					<?php } ?>
+
+					<!-- Message Details -->
+					<div class="message-details">
+						<div class="message-user">
+							<p class=""><span class=""><?php echo $message['0']['message_details'] ?></p>
+						</div>
+						<div class="message-date">
+							<p class=""><span class=""> <?php echo $message['0']['message_created'] ?></p>
+						</div>
 					</div>
-					<div class="message-date">
-						<p class=""><span class=""> <?php echo $message['Message']['message_created'] ?></p>
-					</div>
-				</div>
-		</div>
-	</a>
+
+					<?php if($message['0']['message_from_user_id'] != AuthComponent::user('id')) { ?>
+						<!-- Message Picture -->
+						<div class="message-pic">
+							<?php echo $this->Html->image($message['0']['profile_pic'], array('height' => '200', 'width' => '200', 'fullBase' => true, 'plugin' => false)); ?>
+						</div>
+					<?php } ?>
+			</div>
+		</a>
 	<?php endforeach; ?>
 	<?php unset($message); ?>
 </div>
