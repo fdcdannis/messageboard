@@ -17,23 +17,6 @@ class MessagesController extends AppController {
 
         $user_id = AuthComponent::user('id');
 
-        // $messages = $this->Message->find('all', array(
-        //     'conditions' => array(
-        //                         "OR" => array(
-        //                             'Message.message_to_user_id' => $user_id,
-        //                             'Message.message_from_user_id' => $user_id,
-        //                         )
-        //                     )
-        // ));
-
-        
-
-        // $messages = $this->Message->query("
-        //     SELECT *
-        //     FROM messages
-        //     INNER JOIN users ON messages.message_to_user_id = users.id || messages.message_from_user_id = $user_id;
-        // ");
-
         $messages = $this->Message->find('all', array(
             'joins' => array(
                 array(
@@ -41,8 +24,8 @@ class MessagesController extends AppController {
                     'alias' => 'User',
                     'type' => 'INNER',
                     'conditions' => array(
-                        "OR" => array(
-                            array('User.id = Message.message_to_user_id'),
+                        "AND" => array(
+                            array('Message.message_from_user_id' => $user_id),
                             array('User.id = Message.message_from_user_id')
                         )
                     )
@@ -50,11 +33,11 @@ class MessagesController extends AppController {
             ),
             'conditions' => array(
                 "OR" => array(
-                    // 'User.id = Message.message_to_user_id',
-                    // 'Message.message_to_user_id' => $user_id
+                    // 'User.id = Message.message_to_userid',
+                    // 'Message.message_to_userid' => $user_id
                 )
             ),
-            'fields' => array('User.*', 'Message.*'),   
+            'fields' => array('User.*', 'Message.*'),
             // 'order' => 'Message.datetime DESC'
         ));
 
@@ -62,25 +45,71 @@ class MessagesController extends AppController {
 		$this->set(compact('messages'));
     }
 
-	public function update_image(){
-
-	}
 
     public function reply($id = null) {
 
-        pr($id);
-
-        if (!$id) {
+		if (!$id) {
 			$this->Session->setFlash('Please provide a user id');
 			$this->redirect(array('action'=>'index'));
 		}
 
-		$message = $this->Message->findById($id);
-		if (!$message) {
-			$this->Session->setFlash('Invalid User ID Provided');
-			$this->redirect(array('action'=>'index'));
-		}
+		$messages = $this->Message->find('all', array(
+            'joins' => array(
+                array(
+                    'table' => 'users',
+                    'alias' => 'User',
+                    'type' => 'INNER',
+                    'conditions' => array(
+                        "AND" => array(
+                            array('Message.id' => $id),
+                            array('Message.message_from_user_id = User.id')
+                        )
+                    )
+                )
+            ),
+            'conditions' => array(
+                "OR" => array(
+                    // 'Message.message_id' => $id,
+                )
+            ),
+            'fields' => array('User.*', 'Message.*'),
+            // 'order' => 'Message.datetime DESC'
+        ));
+		// pr($message);
 
+		if ($this->request->is('post')) {
+			$this->Message->create();
+
+			$this->request->data['Message']['reply_flag'] = 1;
+			$this->request->data['Message']['reply_id'] = $id;
+			$this->request->data['Message']['reply_to_user_id'] = $message;
+
+			if ($this->Message->save($this->request->data)) {
+				$this->Session->setFlash(__('The user has been created'));
+			} else {
+				$this->Session->setFlash(__('The user could not be created. Please, try again.'));
+			}
+        }
+		pr($messages);
+
+		$this->set(compact('messages'));
+    }
+
+	public function newmessage() {
+		$user = $this->Auth->user('id');;
+		if ($this->request->is('post')) {
+			$this->Message->create();
+
+			$this->request->data['Message']['message_from_user_id'] = $user;
+
+			pr($this->request->data);
+
+			if ($this->Message->save($this->request->data)) {
+				$this->Session->setFlash(__('The user has been created'));
+			} else {
+				$this->Session->setFlash(__('The user could not be created. Please, try again.'));
+			}
+        }
     }
 
     public function edit($id = null) {

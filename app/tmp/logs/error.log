@@ -5328,3 +5328,511 @@ Stack Trace:
 #4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
 #5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #6 {main}
+2022-09-12 13:24:14 Error: [MissingControllerException] Controller class ImgController could not be found.
+Exception Attributes: array (
+  'class' => 'ImgController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/img/20220911456990279-Ling_DP%20-%20Copy.jpg
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-12 13:24:23 Error: [MissingTableException] Table messages for model Message was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'messages',
+  'class' => 'Message',
+  'ds' => 'default',
+)
+Request URL: /messageboard/messagelist
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3686): Model->setSource('messages')
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3053): Model->getDataSource()
+#2 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3025): Model->_readDataSource('all', Array)
+#3 C:\xampp\htdocs\messageboard\app\Controller\MessagesController.php(40): Model->find('all', Array)
+#4 [internal function]: MessagesController->messagelist()
+#5 C:\xampp\htdocs\messageboard\lib\Cake\Controller\Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#6 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#8 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2022-09-12 13:29:25 Error: [MissingActionException] Action MessagesController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'MessagesController',
+  'action' => 'index',
+)
+Request URL: /messageboard/messages
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#2 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2022-09-12 13:40:27 Error: [Error] Call to a member function findById() on null
+Request URL: /messageboard/messages/reply/1
+Stack Trace:
+#0 [internal function]: MessagesController->reply('1')
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Controller\Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#2 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#4 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2022-09-12 13:40:31 Error: [Error] Call to a member function findById() on null
+Request URL: /messageboard/messages/reply/1
+Stack Trace:
+#0 [internal function]: MessagesController->reply('1')
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Controller\Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#2 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#4 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2022-09-12 13:45:00 Error: [MissingActionException] Action MessagesController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'MessagesController',
+  'action' => 'index',
+)
+Request URL: /messageboard/messages
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#2 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2022-09-12 13:45:12 Error: [MissingActionException] Action MessagesController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'MessagesController',
+  'action' => 'index',
+)
+Request URL: /messageboard/messages
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#2 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2022-09-12 13:45:42 Error: [MissingActionException] Action MessagesController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'MessagesController',
+  'action' => 'index',
+)
+Request URL: /messageboard/messages
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#2 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2022-09-12 13:45:48 Error: [MissingActionException] Action MessagesController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'MessagesController',
+  'action' => 'index',
+)
+Request URL: /messageboard/messages
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#2 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2022-09-12 13:45:57 Error: [MissingActionException] Action MessagesController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'MessagesController',
+  'action' => 'index',
+)
+Request URL: /messageboard/messages
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#2 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2022-09-12 13:46:15 Error: [MissingActionException] Action MessagesController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'MessagesController',
+  'action' => 'index',
+)
+Request URL: /messageboard/messages
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#2 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2022-09-12 13:46:56 Error: [ParseError] syntax error, unexpected token "}"
+Request URL: /messageboard/messages/reply/1
+Stack Trace:
+#0 [internal function]: App::load('MessagesControl...')
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(266): class_exists('MessagesControl...')
+#2 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#3 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2022-09-12 14:27:19 Error: [MissingActionException] Action MessagesController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'MessagesController',
+  'action' => 'index',
+)
+Request URL: /messageboard/messages
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#2 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2022-09-12 14:43:21 Error: [MissingActionException] Action MessagesController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'MessagesController',
+  'action' => 'index',
+)
+Request URL: /messageboard/messages
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#2 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2022-09-12 14:46:38 Error: [MissingActionException] Action MessagesController::newmessage() could not be found.
+Exception Attributes: array (
+  'controller' => 'MessagesController',
+  'action' => 'newmessage',
+)
+Request URL: /messageboard/newmessage
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#2 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2022-09-12 14:46:57 Error: [MissingViewException] View file "Messages\newmessage.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Messages\\newmessage.ctp',
+)
+Request URL: /messageboard/newmessage
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\View\View.php(470): View->_getViewFileName('Messages\\newmes...')
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Controller\Controller.php(968): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#4 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2022-09-12 14:47:07 Error: [MissingViewException] View file "Messages\newmessage.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Messages\\newmessage.ctp',
+)
+Request URL: /messageboard/newmessage
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\View\View.php(470): View->_getViewFileName('Messages\\newmes...')
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Controller\Controller.php(968): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#4 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2022-09-12 14:49:30 Error: [ParseError] syntax error, unexpected token ",", expecting ")"
+Request URL: /messageboard/messagelist
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\htdocs...', Array)
+#1 C:\xampp\htdocs\messageboard\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\messageboard\lib\Cake\Controller\Controller.php(968): View->render(NULL, NULL)
+#3 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#4 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#5 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2022-09-12 14:50:31 Error: [MissingActionException] Action MessagesController::create-message() could not be found.
+Exception Attributes: array (
+  'controller' => 'MessagesController',
+  'action' => 'create-message',
+)
+Request URL: /messageboard/messages/create-message
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#2 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2022-09-12 14:51:09 Error: [MissingActionException] Action MessagesController::create-message() could not be found.
+Exception Attributes: array (
+  'controller' => 'MessagesController',
+  'action' => 'create-message',
+)
+Request URL: /messageboard/messages/create-message
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#2 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2022-09-12 14:51:51 Error: [MissingActionException] Action MessagesController::create-message() could not be found.
+Exception Attributes: array (
+  'controller' => 'MessagesController',
+  'action' => 'create-message',
+)
+Request URL: /messageboard/messages/create-message
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#2 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2022-09-12 15:34:19 Error: [MissingActionException] Action MessagesController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'MessagesController',
+  'action' => 'index',
+)
+Request URL: /messageboard/messages
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#2 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2022-09-12 15:48:30 Error: [ParseError] syntax error, unexpected token "}"
+Request URL: /messageboard/newmessage
+Stack Trace:
+#0 [internal function]: App::load('MessagesControl...')
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(266): class_exists('MessagesControl...')
+#2 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#3 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2022-09-12 15:48:35 Error: [ParseError] syntax error, unexpected token "}"
+Request URL: /messageboard/newmessage
+Stack Trace:
+#0 [internal function]: App::load('MessagesControl...')
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(266): class_exists('MessagesControl...')
+#2 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#3 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2022-09-12 16:13:58 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Message.message_to_user_id' in 'on clause'
+Request URL: /messageboard/messagelist
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Model\Datasource\DboSource.php(502): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Model\Datasource\DboSource.php(468): DboSource->_execute('SELECT `User`.*...', Array)
+#2 C:\xampp\htdocs\messageboard\lib\Cake\Model\Datasource\DboSource.php(715): DboSource->execute('SELECT `User`.*...', Array, Array)
+#3 C:\xampp\htdocs\messageboard\lib\Cake\Model\Datasource\DboSource.php(1226): DboSource->fetchAll('SELECT `User`.*...', Array)
+#4 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3053): DboSource->read(Object(Message), Array)
+#5 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3025): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\messageboard\app\Controller\MessagesController.php(23): Model->find('all', Array)
+#7 [internal function]: MessagesController->messagelist()
+#8 C:\xampp\htdocs\messageboard\lib\Cake\Controller\Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#9 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#11 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2022-09-12 16:15:01 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Message.message_from_userid' in 'on clause'
+Request URL: /messageboard/messagelist
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Model\Datasource\DboSource.php(502): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Model\Datasource\DboSource.php(468): DboSource->_execute('SELECT `User`.*...', Array)
+#2 C:\xampp\htdocs\messageboard\lib\Cake\Model\Datasource\DboSource.php(715): DboSource->execute('SELECT `User`.*...', Array, Array)
+#3 C:\xampp\htdocs\messageboard\lib\Cake\Model\Datasource\DboSource.php(1226): DboSource->fetchAll('SELECT `User`.*...', Array)
+#4 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3053): DboSource->read(Object(Message), Array)
+#5 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3025): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\messageboard\app\Controller\MessagesController.php(23): Model->find('all', Array)
+#7 [internal function]: MessagesController->messagelist()
+#8 C:\xampp\htdocs\messageboard\lib\Cake\Controller\Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#9 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#11 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2022-09-12 16:15:01 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Message.message_from_userid' in 'on clause'
+Request URL: /messageboard/messagelist
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Model\Datasource\DboSource.php(502): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Model\Datasource\DboSource.php(468): DboSource->_execute('SELECT `User`.*...', Array)
+#2 C:\xampp\htdocs\messageboard\lib\Cake\Model\Datasource\DboSource.php(715): DboSource->execute('SELECT `User`.*...', Array, Array)
+#3 C:\xampp\htdocs\messageboard\lib\Cake\Model\Datasource\DboSource.php(1226): DboSource->fetchAll('SELECT `User`.*...', Array)
+#4 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3053): DboSource->read(Object(Message), Array)
+#5 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3025): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\messageboard\app\Controller\MessagesController.php(23): Model->find('all', Array)
+#7 [internal function]: MessagesController->messagelist()
+#8 C:\xampp\htdocs\messageboard\lib\Cake\Controller\Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#9 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#11 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2022-09-12 16:15:02 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Message.message_from_userid' in 'on clause'
+Request URL: /messageboard/messagelist
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Model\Datasource\DboSource.php(502): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Model\Datasource\DboSource.php(468): DboSource->_execute('SELECT `User`.*...', Array)
+#2 C:\xampp\htdocs\messageboard\lib\Cake\Model\Datasource\DboSource.php(715): DboSource->execute('SELECT `User`.*...', Array, Array)
+#3 C:\xampp\htdocs\messageboard\lib\Cake\Model\Datasource\DboSource.php(1226): DboSource->fetchAll('SELECT `User`.*...', Array)
+#4 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3053): DboSource->read(Object(Message), Array)
+#5 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3025): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\messageboard\app\Controller\MessagesController.php(23): Model->find('all', Array)
+#7 [internal function]: MessagesController->messagelist()
+#8 C:\xampp\htdocs\messageboard\lib\Cake\Controller\Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#9 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#11 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2022-09-12 16:15:02 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Message.message_from_userid' in 'on clause'
+Request URL: /messageboard/messagelist
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Model\Datasource\DboSource.php(502): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Model\Datasource\DboSource.php(468): DboSource->_execute('SELECT `User`.*...', Array)
+#2 C:\xampp\htdocs\messageboard\lib\Cake\Model\Datasource\DboSource.php(715): DboSource->execute('SELECT `User`.*...', Array, Array)
+#3 C:\xampp\htdocs\messageboard\lib\Cake\Model\Datasource\DboSource.php(1226): DboSource->fetchAll('SELECT `User`.*...', Array)
+#4 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3053): DboSource->read(Object(Message), Array)
+#5 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3025): Model->_readDataSource('all', Array)
+#6 C:\xampp\htdocs\messageboard\app\Controller\MessagesController.php(23): Model->find('all', Array)
+#7 [internal function]: MessagesController->messagelist()
+#8 C:\xampp\htdocs\messageboard\lib\Cake\Controller\Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#9 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#11 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2022-09-12 17:08:12 Error: [MissingTableException] Table replies for model Reply was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'replies',
+  'class' => 'Reply',
+  'ds' => 'default',
+)
+Request URL: /messageboard/messages/reply/2
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3686): Model->setSource('replies')
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(1394): Model->getDataSource()
+#2 C:\xampp\htdocs\messageboard\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#3 C:\xampp\htdocs\messageboard\lib\Cake\View\Helper\FormHelper.php(480): FormHelper->_introspectModel('Reply', 'fields')
+#4 C:\xampp\htdocs\messageboard\app\View\Messages\reply.ctp(5): FormHelper->create('Reply')
+#5 C:\xampp\htdocs\messageboard\lib\Cake\View\View.php(971): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\messageboard\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\htdocs...', Array)
+#7 C:\xampp\htdocs\messageboard\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\messageboard\lib\Cake\Controller\Controller.php(968): View->render(NULL, NULL)
+#9 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#10 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#11 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2022-09-12 17:09:47 Error: [MissingTableException] Table replies for model Reply was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'replies',
+  'class' => 'Reply',
+  'ds' => 'default',
+)
+Request URL: /messageboard/messages/reply/2
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3686): Model->setSource('replies')
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(1394): Model->getDataSource()
+#2 C:\xampp\htdocs\messageboard\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#3 C:\xampp\htdocs\messageboard\lib\Cake\View\Helper\FormHelper.php(480): FormHelper->_introspectModel('Reply', 'fields')
+#4 C:\xampp\htdocs\messageboard\app\View\Messages\reply.ctp(5): FormHelper->create('Reply')
+#5 C:\xampp\htdocs\messageboard\lib\Cake\View\View.php(971): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\messageboard\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\htdocs...', Array)
+#7 C:\xampp\htdocs\messageboard\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\messageboard\lib\Cake\Controller\Controller.php(968): View->render(NULL, NULL)
+#9 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#10 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#11 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2022-09-12 17:13:47 Error: [MissingControllerException] Controller class MessagelistController could not be found.
+Exception Attributes: array (
+  'class' => 'MessagelistController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/messagelist
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-12 17:13:49 Error: [MissingControllerException] Controller class MessagelistController could not be found.
+Exception Attributes: array (
+  'class' => 'MessagelistController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/messagelist
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-12 17:14:06 Error: [MissingTableException] Table replies for model Reply was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'replies',
+  'class' => 'Reply',
+  'ds' => 'default',
+)
+Request URL: /messageboard/messages/reply/2
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3686): Model->setSource('replies')
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(1394): Model->getDataSource()
+#2 C:\xampp\htdocs\messageboard\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#3 C:\xampp\htdocs\messageboard\lib\Cake\View\Helper\FormHelper.php(480): FormHelper->_introspectModel('Reply', 'fields')
+#4 C:\xampp\htdocs\messageboard\app\View\Messages\reply.ctp(5): FormHelper->create('Reply')
+#5 C:\xampp\htdocs\messageboard\lib\Cake\View\View.php(971): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\messageboard\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\htdocs...', Array)
+#7 C:\xampp\htdocs\messageboard\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\messageboard\lib\Cake\Controller\Controller.php(968): View->render(NULL, NULL)
+#9 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#10 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#11 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2022-09-12 17:14:25 Error: [MissingTableException] Table replies for model Reply was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'replies',
+  'class' => 'Reply',
+  'ds' => 'default',
+)
+Request URL: /messageboard/messages/reply/7
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3686): Model->setSource('replies')
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(1394): Model->getDataSource()
+#2 C:\xampp\htdocs\messageboard\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#3 C:\xampp\htdocs\messageboard\lib\Cake\View\Helper\FormHelper.php(480): FormHelper->_introspectModel('Reply', 'fields')
+#4 C:\xampp\htdocs\messageboard\app\View\Messages\reply.ctp(5): FormHelper->create('Reply')
+#5 C:\xampp\htdocs\messageboard\lib\Cake\View\View.php(971): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\messageboard\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\htdocs...', Array)
+#7 C:\xampp\htdocs\messageboard\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\messageboard\lib\Cake\Controller\Controller.php(968): View->render(NULL, NULL)
+#9 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#10 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#11 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2022-09-12 17:16:32 Error: [MissingTableException] Table replies for model Reply was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'replies',
+  'class' => 'Reply',
+  'ds' => 'default',
+)
+Request URL: /messageboard/messages/reply/7
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3686): Model->setSource('replies')
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(1394): Model->getDataSource()
+#2 C:\xampp\htdocs\messageboard\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#3 C:\xampp\htdocs\messageboard\lib\Cake\View\Helper\FormHelper.php(480): FormHelper->_introspectModel('Reply', 'fields')
+#4 C:\xampp\htdocs\messageboard\app\View\Messages\reply.ctp(5): FormHelper->create('Reply')
+#5 C:\xampp\htdocs\messageboard\lib\Cake\View\View.php(971): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\messageboard\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\htdocs...', Array)
+#7 C:\xampp\htdocs\messageboard\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\messageboard\lib\Cake\Controller\Controller.php(968): View->render(NULL, NULL)
+#9 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#10 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#11 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2022-09-12 17:17:40 Error: [Error] Call to a member function create() on null
+Request URL: /messageboard/messages/reply/7
+Stack Trace:
+#0 [internal function]: MessagesController->reply('7')
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Controller\Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#2 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#4 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2022-09-12 17:19:01 Error: [Error] Call to a member function create() on null
+Request URL: /messageboard/messages/reply/7
+Stack Trace:
+#0 [internal function]: MessagesController->reply('7')
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Controller\Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#2 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#4 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2022-09-12 17:27:28 Error: [Error] Call to a member function create() on null
+Request URL: /messageboard/messages/reply/7
+Stack Trace:
+#0 [internal function]: MessagesController->reply('7')
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Controller\Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#2 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#4 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2022-09-12 17:27:56 Error: [Error] Call to a member function create() on null
+Request URL: /messageboard/messages/reply/7
+Stack Trace:
+#0 [internal function]: MessagesController->reply('7')
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Controller\Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#2 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#4 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2022-09-12 17:28:01 Error: [Error] Call to a member function create() on null
+Request URL: /messageboard/messages/reply/7
+Stack Trace:
+#0 [internal function]: MessagesController->reply('7')
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Controller\Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#2 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#4 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}

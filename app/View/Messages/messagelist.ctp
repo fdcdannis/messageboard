@@ -5,14 +5,14 @@
 		<?php
 			echo $this->Html->link(
 					$this->Html->tag('div', "New Message", array('class' => '')),
-					array('action'=>'edit', $message['User']['id']),
+					array('controller' => 'messages', 'action' => 'newmessage'),
 					array('escape' => false)
 			);
 		?>
 	</div>
-	
-	<?php foreach($messages as $message): ?>	
-	<a href="/messageboard/messages/reply/<?php echo $message['Message']['message_id'] ?>">
+
+	<?php foreach($messages as $message): ?>
+	<a href="/messageboard/messages/reply/<?php echo $message['Message']['id'] ?>">
 		<div class="message-list">
 				<!-- Message Picture -->
 				<div class="message-pic">
