@@ -910,12 +910,14 @@ form div.submit > input {
     font-weight: 600;
 }
 
+.new-message,
 .edit-profile {
     margin-bottom: 30px;
     display: flex;
     justify-content: flex-end;
 }
 
+.new-message > a > div,
 .edit-profile > a > div {
     padding: 15px 25px;
     background: #3e3636;
@@ -923,6 +925,10 @@ form div.submit > input {
     color: white;
     text-align: center;
     border-radius: 5px;
+}
+
+.new-message > a > div {
+    width: auto;
 }
 
 .submit-profile > div > input {
@@ -958,6 +964,50 @@ a {
     border: 1px solid #c1b4b4;
     cursor: pointer;
     font-weight: normal;
+}
+
+/** Messagelis CSS **/
+.container-messagelist {
+    width: 725px;
+    margin: 0 auto;
+	margin-top: 60px;
+}
+.container-messagelist a {
+    color: black;
+}
+.message-list {
+	border: 1px solid #dddcdc;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    width: 100%;
+}
+.message-pic {
+	width: 28%;
+    border: 1px solid #d4d4d4;
+    border-radius: 5px;
+    padding: 5px;
+	margin-right: 15px;
+}
+.message-details {
+    width: 72%;
+	position: relative;
+	border: 1px solid #d4d1d1;
+}
+.message-user {
+    padding: 10px;
+}
+.message-date {
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid #d4d1d1;
+    width: 100%;
+    height: 20px;
+}
+.message-date > p {
+	text-align: right;
+    padding: 0;
+    padding-right: 10px;
 }
 
 /** Margins **/
