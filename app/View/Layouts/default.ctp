@@ -39,16 +39,16 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<div id="container">
 		<div id="header" class="menu">
 			<div class="logo">
-				<?php echo $this->Html->link( "Message Board",   array('action'=>'login') ); ?>
+				<?php echo $this->Html->link( "Message Board",   array('controller' => 'messages', 'action'=>'messagelist') ); ?>
 			</div>
 			<div class="login">
 				<?php
 					if($this->Session->check('Auth.User')){
-						echo $this->Html->link( AuthComponent::user('name'),   array('action'=>'myprofile') );
-						echo $this->Html->link( "Logout",   array('action'=>'logout') );
+						echo $this->Html->link( AuthComponent::user('name'),   array('controller' => 'users', 'action'=>'myprofile') );
+						echo $this->Html->link( "Logout",   array('controller' => 'users', 'action'=>'logout') );
 					}else{
-						echo $this->Html->link( "Register",  array('action'=>'register') );
-						echo $this->Html->link( "Login",   array('action'=>'login') );
+						echo $this->Html->link( "Register",  array('controller' => 'users', 'action'=>'register') );
+						echo $this->Html->link( "Login",   array('controller' => 'users', 'action'=>'login') );
 					}
 				?>
 			</div>

@@ -981,6 +981,7 @@ a {
     padding: 10px;
     display: flex;
     width: 100%;
+	margin-bottom: 30px;
 }
 .message-pic {
 	width: 28%;

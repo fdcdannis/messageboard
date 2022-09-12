@@ -25,23 +25,26 @@
  * its action called 'display', and we pass a param to select the view file
  * to use (in this case, /app/View/Pages/home.ctp)...
  */
-	Router::connect('/messagelist', array('controller' => 'users', 'action' => 'index'));
-	Router::connect('/login', array('controller' => 'users', 'action' => 'login'));
-	Router::connect('/logout', array('controller' => 'users', 'action' => 'logout'));
 
-	/**  Thank you Page */
-	Router::connect('/thankyou', array('controller' => 'users', 'action' => 'thankyou'));
+	/** Users Controller */
+	Router::connect('/', array('controller' => 'users', 'action' => 'login')); /** Users Login */
+	Router::connect('/login', array('controller' => 'users', 'action' => 'login')); /** Login User */
+	Router::connect('/logout', array('controller' => 'users', 'action' => 'logout')); /** Logout User */
+	Router::connect('/thankyou', array('controller' => 'users', 'action' => 'thankyou')); /** Thank you Page */
+	Router::connect('/myprofile', array('controller' => 'users', 'action' => 'myprofile')); /** My Profile */
+	Router::connect('/register', array('controller' => 'users', 'action' => 'register')); /** Register User */
 
-	/** My Profile */
-	Router::connect('/myprofile', array('controller' => 'users', 'action' => 'myprofile'));
-	Router::connect('/myprofile/edit', array('controller' => 'users', 'action' => 'edit'));
-
-	/** My Profile */
-	Router::connect('/register', array('controller' => 'users', 'action' => 'register'));
+	/** Messages Controller */
+	// Router::connect('/messagelist', array('controller' => 'users', 'action' => 'index'));
+	Router::connect('/messagelist', array('controller' => 'messages', 'action' => 'messagelist')); /** Message list */
+	// Router::connect('/messagelist/reply', array('controller' => 'messages', 'action' => 'reply')); /** Message list */
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
  */
-	Router::connect('/', array('controller' => 'users', 'action' => 'login'));
+
+
+
+
 
 /**
  * Load all plugin routes. See the CakePlugin documentation on

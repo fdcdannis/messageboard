@@ -100,6 +100,7 @@ class UsersController extends AppController {
 	}
 
     public function edit($id = null) {
+		
 		if (!$id) {
 			$this->Session->setFlash('Please provide a user id');
 			$this->redirect(array('action'=>'index'));
