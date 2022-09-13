@@ -20,7 +20,17 @@ class UsersController extends AppController {
 		}
 	}
 
-	public function myprofile() {
+	public function myprofile($id = null) {
+		$user = $this->User->findById(AuthComponent::user('id'));
+		$this->set(compact('user'));
+	}
+
+	public function userprofile($id = null) {
+		$user = $this->User->findById($id);
+		$this->set(compact('user'));
+	}
+
+	public function myaccount() {
 		$user = $this->User->findById(AuthComponent::user('id'));
 		$this->set(compact('user'));
 	}
@@ -49,13 +59,6 @@ class UsersController extends AppController {
 	}
 
     public function index() {
-		// $this->paginate = array(
-		// 	'limit' => 6,
-		// 	'order' => array('User.name' => 'asc' )
-		// );
-		// $users = $this->paginate('User');
-		// $this->set(compact('users'));
-
 		$user = $this->User->findById(AuthComponent::user('id'));
 		$this->set(compact('user'));
     }
@@ -72,35 +75,8 @@ class UsersController extends AppController {
         }
     }
 
-	public function update_image(){
-
-		$id = $this->Auth->user('id');
-
-
-		// $this->Profile->id = $id;
-		// $this->set('profile', $this->User->findById($id));
-
-		// if ($this->request->is('post')) {
-		// 	$frmData = $this->request->data;
-		// 	$tmp = $frmData['picture']['tmp_name'];
-		// 	$hash = rand();
-		// 	$date = date("Ymd");
-		// 	$image = $date.$hash."-".$frmData['picture']['name'];
-		// 	$target = WWW_ROOT.'img'.DS.'uploads'.DS;
-
-		// 	$target = $target.basename($image);
-		// 	if (move_uploaded_file($tmp, $target)) {
-		// 		echo "Successfully moved";
-		// 	}
-		// 	else
-		// 	{
-		// 		echo "Error";
-		// 	}
-		// }
-	}
-
     public function edit($id = null) {
-		
+
 		if (!$id) {
 			$this->Session->setFlash('Please provide a user id');
 			$this->redirect(array('action'=>'index'));

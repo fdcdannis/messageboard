@@ -32,6 +32,13 @@
 	Router::connect('/logout', array('controller' => 'users', 'action' => 'logout')); /** Logout User */
 	Router::connect('/thankyou', array('controller' => 'users', 'action' => 'thankyou')); /** Thank you Page */
 	Router::connect('/myprofile', array('controller' => 'users', 'action' => 'myprofile')); /** My Profile */
+	Router::connect('/userprofile/:id',
+					array('controller' => 'users', 'action' => 'userprofile'),
+					array(
+						'pass' => array('id')
+					)
+	);
+	Router::connect('/myaccount', array('controller' => 'users', 'action' => 'myaccount')); /** My Profile */
 	Router::connect('/register', array('controller' => 'users', 'action' => 'register')); /** Register User */
 
 	/** Messages Controller */
@@ -41,8 +48,8 @@
 	// Router::connect('/messageboard/messages/deletemessage/:id', array('controller' => 'messages', 'action' => 'deletemessage')); /** Message list */
 
 	Router::connect(
-		'/messageboard/messages/deletemessage/:id',
-		array('controller' => 'messages', 'action' => 'deletemessage'),
+		'/messageboard/messages/messagelist/:id',
+		array('controller' => 'messages', 'action' => 'messagelist'),
 		array(
 			'pass' => array('id')
 		)

@@ -8,12 +8,20 @@ class MessagesController extends AppController {
     	'order' => array('User.name' => 'asc' )
     );
 
+	public $components = array(
+        'RequestHandler'
+    );
+
     public function beforeFilter() {
         parent::beforeFilter();
         $this->Auth->allow('login','register', 'thankyou');
     }
 
-    public function messagelist() {
+    public function messagelist($id = null) {
+		// pr($id);
+
+		$this->Message->deleteAll(array('Message.id'=>$id));
+
         $user_id = AuthComponent::user('id');
 		$messages = $this->Message->query("
 				SELECT  *
@@ -25,7 +33,19 @@ class MessagesController extends AppController {
 				FROM    Users AS User
 				JOIN    Messages AS Message
 				ON Message.message_to_userid = $user_id AND User.id = Message.message_from_user_id AND Message.reply_flag = 0
+				ORDER BY message_created desc
 		");
+
+		$test = $this->Message->query("
+
+				SELECT  *
+				FROM    Users AS User
+				JOIN    Messages AS Message
+				ON Message.message_from_user_id = $user_id AND User.id = Message.message_from_user_id AND Message.reply_flag = 0
+				ORDER BY Message.message_created asc
+		");
+
+		// pr($messages);
 
 		// pr($messages);
 		$this->set(compact('messages'));
@@ -52,6 +72,7 @@ class MessagesController extends AppController {
 				FROM    Messages AS Message
 				JOIN    Users AS User
 				ON Message.message_to_userid = $user_id AND User.id = Message.message_from_user_id AND (Message.id = $id OR Message.reply_id = $id)
+				ORDER BY message_created desc
 		");
 
         // pr($messages);
@@ -72,8 +93,9 @@ class MessagesController extends AppController {
 			}
 
 			if ($this->Message->save($this->request->data)) {
-				$this->Session->setFlash(__('The user has been created'));
-				// $this->redirect(array('action' => 'reply'));
+				// $this->Session->setFlash(__('The user has been created'));
+				$this->redirect(array('action' => 'reply', $id, $to_user_id, $from_user_id));
+				// $this->redirect(['controller' => 'messages', 'action' => 'reply', '?' => ['param1' => '1', 'param2' => '2']]);
 			} else {
 				// $this->Session->setFlash(__('The user could not be created. Please, try again.'));
 			}
@@ -88,16 +110,16 @@ class MessagesController extends AppController {
 
 		if ($this->request->is('post')) {
 			$this->Message->create();
-	
+
 			// $this->request->data['Message']['message_id'] = $user_id;
 			$this->request->data['Message']['message_from_user_id'] = $user_id;
 			$this->request->data['Message']['reply_flag'] = 0;
 			$this->request->data['Message']['message_id'] = $user_id;
 			$this->request->data['Message']['reply_id'] = 0;
 			$this->request->data['Message']['message_created'] = $currDateTime;
-	
+
 			// pr($this->request->data);
-	
+
 			if ($this->Message->save($this->request->data)) {
 				$this->redirect(array('action' => 'messagelist'));
 				// $this->Session->setFlash(__('The user has been created'));
@@ -105,12 +127,12 @@ class MessagesController extends AppController {
 				// $this->Session->setFlash(__('The user could not be created. Please, try again.'));
 			}
 		}
-	
+
 		$this->loadmodel('User');
 		$result = $this->User->find('list');
-	
+
 		// pr($result);
-		
+
 		$this->set(compact('result'));
     }
 
@@ -158,10 +180,10 @@ class MessagesController extends AppController {
 
     public function deletemessage($id = null) {
 
-		// pr($id);
+		pr($id);
 
 		$this->Message->deleteAll(array('Message.id'=>$id));
-		$this->redirect(array('action' => 'messagelist'));
+		// $this->redirect(array('action' => 'messagelist'));
     }
 
 }

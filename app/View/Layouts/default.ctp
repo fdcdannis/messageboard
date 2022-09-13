@@ -34,6 +34,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 </head>
 <body>
 	<div id="container">
@@ -41,14 +42,22 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			<div class="logo">
 				<?php echo $this->Html->link( "Message Board",   array('controller' => 'messages', 'action'=>'messagelist') ); ?>
 			</div>
+			<div class="dashboard">
+				<?php
+					if($this->Session->check('Auth.User')){
+						echo $this->Html->link( "Messagelist",   array('controller' => 'messages', 'action'=>'messagelist') );
+					}
+				?>
+			</div>
 			<div class="login">
 				<?php
 					if($this->Session->check('Auth.User')){
+						echo $this->Html->link( "My Account",   array('controller' => 'users', 'action'=>'myaccount') );
 						echo $this->Html->link( AuthComponent::user('name'),   array('controller' => 'users', 'action'=>'myprofile') );
 						echo $this->Html->link( "Logout",   array('controller' => 'users', 'action'=>'logout') );
 					}else{
 						echo $this->Html->link( "Register",  array('controller' => 'users', 'action'=>'register') );
-						echo $this->Html->link( "Login",   array('controller' => 'users', 'action'=>'login') );
+						echo $this->Html->link( "Login",   array('controller' => 'users', 'action'=>'login'), array('class' => 'login-user') );
 					}
 				?>
 			</div>

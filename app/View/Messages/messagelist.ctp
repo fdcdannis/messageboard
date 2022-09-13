@@ -11,18 +11,39 @@
 		?>
 	</div>
 
+	<div class="search-message">
+		<input type="" class="" id=""></input>
+		<button type="button" id="" class="">Search</button>
+	</div>
+
 	<?php foreach($messages as $message): ?>
 
-		<div class="message-list-contain">
+		<div class="message-list-contain-<?php echo $message['0']['id'] ?>">
 			<!-- Delete Button -->
-			
-				<div class="delete-btn">
+
+			<div class="delete-btn">
+				<div class="">
 					<?php if($message['0']['message_from_user_id'] == AuthComponent::user('id')) { ?>
-						<a href="/messageboard/messages/deletemessage/<?php echo $message['0']['id'] ?>" >Delete</a>
+						<a href="/messageboard/userprofile/<?php echo AuthComponent::user('id') ?>">
+							<p class=""><?php echo $message['0']['firstname'] ?> <?php echo $message['0']['lastname'] ?></p>
+						</a>
+					<?php } else { ?>
+						<a href="/messageboard/userprofile/<?php echo $message['0']['message_from_user_id'] ?>">
+							<p class=""><?php echo $message['0']['firstname'] ?> <?php echo $message['0']['lastname'] ?></p>
+						</a>
 					<?php } ?>
 				</div>
 
-			<a href="/messageboard/messages/reply/<?php echo $message['0']['id'] ?>/<?php echo $message['0']['message_to_userid'] ?>/<?php echo $message['0']['message_from_user_id'] ?>">			
+
+				<?php if($message['0']['message_from_user_id'] == AuthComponent::user('id')) { ?>
+
+					<button type="button" value="<?php echo $message['0']['id'] ?>">Delete</button>
+
+				<?php } ?>
+
+			</div>
+
+			<a href="/messageboard/messages/reply/<?php echo $message['0']['id'] ?>/<?php echo $message['0']['message_to_userid'] ?>/<?php echo $message['0']['message_from_user_id'] ?>">
 				<div class="message-list">
 						<?php if($message['0']['message_from_user_id'] == AuthComponent::user('id')) { ?>
 							<!-- Message Picture -->
@@ -55,28 +76,22 @@
 </div>
 
 <script type="text/javascript">
-	// $(document).on('click','.delete',function(){
-	// 	var id= $(this).val();
+	$(document).on('click','.delete-btn > button',function(){
+		var id= $(this).val();
 
-	// 	console.log(id);
-	// 	$.ajax({
-	// 		type: "POST",
-    // 		url: '/messageboard/messages/deletemessage/'+id, //generate cakephp url
-	// 		data: '{"id":"' + id+'"}',
-	// 		dataType: "json",
-	// 		success: function (data) {
-	// 			data = JSON.parse(data);
-	// 			if (data.code == 200) {
-	// 				//success work
-	// 				alert(data.message);
-	// 			} else if (data.code == 201) {
-	// 				//   error work
-	// 				alert(data.message);
-	// 			} else {
-	// 				// something went wrong 
-	// 			}
-	// 		}
-	// 	});
-
-	// });
+		var result = confirm('Are you sure you want to delete this?');
+		// console.log(id);
+		if(result) {
+			$.ajax({
+				type: "POST",
+				url: '/messageboard/messages/messagelist/'+id, //generate cakephp url
+				data: '{"id":"' + id+'"}',
+				dataType: "json",
+				success:function(resp){//reso is msg string returned from controller.
+					alert(resp);
+				}
+			});
+			$(".message-list-contain-"+id).remove();
+		}
+	});
 </script>

@@ -6,14 +6,27 @@
 		<div class="reply-message">
 			<?php echo $this->Form->textarea('message_details'); ?>
 		</div>
-		<div class="new-message">
+		<div class="reply-message-btn">
 			<?php
 				echo $this->Form->button(_('Reply Message'), ['id' => 'replyBtn'])
 			?>
+			<!-- <button type="button" value="<?php echo $message['0']['id'] ?>">Reply</button> -->
 		</div>
 	<?php echo $this->Form->end(); ?>
 
 	<?php foreach($messages as $message): ?>
+	<div class="delete-btn">
+		<div class="">
+			<p class=""><?php echo $message['0']['firstname'] ?> <?php echo $message['0']['lastname'] ?></p>
+		</div>
+
+		<?php if($message['0']['message_from_user_id'] == AuthComponent::user('id')) { ?>
+
+			<button type="hidden" style="display: none" value="<?php echo $message['0']['id'] ?>">Delete</button>
+
+		<?php } ?>
+
+	</div>
 	<div class="message-list">
 			<?php if($message['0']['message_from_user_id'] == AuthComponent::user('id')) { ?>
 				<!-- Message Picture -->
@@ -44,21 +57,5 @@
 </div>
 
 <script type="text/javascript">
-	// $function(){
-	// 	$('#replyBtn').click(function(){
-	// 		$.ajax({
-	// 			dataType: "html",
-	// 			type: "POST",
-	// 			evalScripts: true,
-	// 			url: '<?php echo Router::url(array('controller'=>'messages','action'=>'reply'));?>',
-	// 			data: ({type:'original'}),
-	// 			success: function (data, textStatus){
 
-	// 				console.log(data);
-	// 				// $("#div1").html(data);
-
-	// 			}
-	// 		});
-	// 	});
-	// }
 </script>
