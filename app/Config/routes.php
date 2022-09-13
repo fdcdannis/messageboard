@@ -38,6 +38,16 @@
 	// Router::connect('/messagelist', array('controller' => 'users', 'action' => 'index'));
 	Router::connect('/messagelist', array('controller' => 'messages', 'action' => 'messagelist')); /** Message list */
 	Router::connect('/newmessage', array('controller' => 'messages', 'action' => 'newmessage')); /** Message list */
+	// Router::connect('/messageboard/messages/deletemessage/:id', array('controller' => 'messages', 'action' => 'deletemessage')); /** Message list */
+
+	Router::connect(
+		'/messageboard/messages/deletemessage/:id',
+		array('controller' => 'messages', 'action' => 'deletemessage'),
+		array(
+			'pass' => array('id')
+		)
+	);
+
 	// Router::connect('/messagelist/reply', array('controller' => 'messages', 'action' => 'reply')); /** Message list */
 /**
  * ...and connect the rest of 'Pages' controller's URLs.

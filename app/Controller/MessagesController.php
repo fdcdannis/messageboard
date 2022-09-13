@@ -14,36 +14,20 @@ class MessagesController extends AppController {
     }
 
     public function messagelist() {
-
         $user_id = AuthComponent::user('id');
-
-		// pr($user_id);
-
-		// $messages = $this->Message->query("
-		// 		SELECT  *
-		// 		FROM    Messages AS Message
-		// 		JOIN    Users AS User
-		// 		ON Message.message_from_user_id = $user_id AND User.id = Message.message_from_user_id AND Message.reply_flag = 0
-		// 		UNION
-		// 		SELECT  *
-		// 		FROM    Messages AS Message
-		// 		JOIN    Users AS User
-		// 		ON Message.message_to_userid = $user_id AND User.id = Message.message_from_user_id AND Message.reply_flag = 0
-		// ");
-
 		$messages = $this->Message->query("
 				SELECT  *
 				FROM    Users AS User
 				JOIN    Messages AS Message
 				ON Message.message_from_user_id = $user_id AND User.id = Message.message_from_user_id AND Message.reply_flag = 0
-				UNION
+				UNION ALL
 				SELECT  *
 				FROM    Users AS User
 				JOIN    Messages AS Message
 				ON Message.message_to_userid = $user_id AND User.id = Message.message_from_user_id AND Message.reply_flag = 0
 		");
 
-        // pr($messages);
+		// pr($messages);
 		$this->set(compact('messages'));
     }
 
@@ -51,10 +35,7 @@ class MessagesController extends AppController {
     public function reply($id = null, $to_user_id = null, $from_user_id = null) {
 
 		$user_id = AuthComponent::user('id');
-
-		// pr($id);
-		// pr($to_user_id);
-		// pr($from_user_id);
+		$currDateTime = date("Y-m-d H:i:s");
 
 		if (!$id) {
 			$this->Session->setFlash('Please provide a user id');
@@ -81,8 +62,8 @@ class MessagesController extends AppController {
 			$this->request->data['Message']['reply_flag'] = 1;
 			$this->request->data['Message']['reply_id'] = $id;
 			$this->request->data['Message']['message_id'] = $id;
-
 			$this->request->data['Message']['message_from_user_id'] = $user_id;
+			$this->request->data['Message']['message_created'] = $currDateTime;
 
 			if($to_user_id == $user_id){
 				$this->request->data['Message']['message_to_userid'] = $from_user_id;
@@ -92,8 +73,9 @@ class MessagesController extends AppController {
 
 			if ($this->Message->save($this->request->data)) {
 				$this->Session->setFlash(__('The user has been created'));
+				// $this->redirect(array('action' => 'reply'));
 			} else {
-				$this->Session->setFlash(__('The user could not be created. Please, try again.'));
+				// $this->Session->setFlash(__('The user could not be created. Please, try again.'));
 			}
         }
 
@@ -102,20 +84,34 @@ class MessagesController extends AppController {
 
 	public function newmessage() {
 		$user_id = $this->Auth->user('id');;
+		$currDateTime = date("Y-m-d H:i:s");
+
 		if ($this->request->is('post')) {
 			$this->Message->create();
-
+	
 			// $this->request->data['Message']['message_id'] = $user_id;
 			$this->request->data['Message']['message_from_user_id'] = $user_id;
-
-			pr($this->request->data);
-
+			$this->request->data['Message']['reply_flag'] = 0;
+			$this->request->data['Message']['message_id'] = $user_id;
+			$this->request->data['Message']['reply_id'] = 0;
+			$this->request->data['Message']['message_created'] = $currDateTime;
+	
+			// pr($this->request->data);
+	
 			if ($this->Message->save($this->request->data)) {
-				$this->Session->setFlash(__('The user has been created'));
+				$this->redirect(array('action' => 'messagelist'));
+				// $this->Session->setFlash(__('The user has been created'));
 			} else {
-				$this->Session->setFlash(__('The user could not be created. Please, try again.'));
+				// $this->Session->setFlash(__('The user could not be created. Please, try again.'));
 			}
-        }
+		}
+	
+		$this->loadmodel('User');
+		$result = $this->User->find('list');
+	
+		// pr($result);
+		
+		$this->set(compact('result'));
     }
 
     public function edit($id = null) {
@@ -160,24 +156,12 @@ class MessagesController extends AppController {
 		}
     }
 
-    public function delete($id = null) {
+    public function deletemessage($id = null) {
 
-		if (!$id) {
-			$this->Session->setFlash('Please provide a user id');
-			$this->redirect(array('action'=>'index'));
-		}
+		// pr($id);
 
-        $this->User->id = $id;
-        if (!$this->User->exists()) {
-            $this->Session->setFlash('Invalid user id provided');
-			$this->redirect(array('action'=>'index'));
-        }
-        if ($this->User->saveField('status', 0)) {
-            $this->Session->setFlash(__('User deleted'));
-            $this->redirect(array('action' => 'index'));
-        }
-        $this->Session->setFlash(__('User was not deleted'));
-        $this->redirect(array('action' => 'index'));
+		$this->Message->deleteAll(array('Message.id'=>$id));
+		$this->redirect(array('action' => 'messagelist'));
     }
 
 }

@@ -1062,6 +1062,22 @@ a {
 .new-messages > textarea {
     height: 300px;
 }
+.delete-btn {
+    border: 1px solid #dddcdc;
+    border-bottom: none;
+    width: 100%;
+    padding: 10px;
+    text-align: right;
+    position: relative;
+    top: 5px;
+}
+.delete-btn > a {
+    color: red;
+}
+
+.message-to {
+    float: left;
+}
 
 /** Margins **/
 .ml-0 { margin-left: 0 }

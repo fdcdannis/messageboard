@@ -1,16 +1,17 @@
 
 <div class="container-newmessage">
 	<?php echo $this->Form->create('Message');?>
-		<div class="">
-			Create a new message
-		</div>
 		<!-- Message Details -->
 		<div class="new-message-details">
 
 			<!-- Recipent -->
 			<div class="recipient">
 				<span class="">Recipient</span>
-				<?php echo $this->Form->input('message_to_userid'); ?>
+				<!-- <?php echo $this->Form->input('message_to_userid', array('type' => 'text')); ?> -->
+
+				<?php 
+					echo $this->Form->input('message_to_userid', array('type'=>'select', 'label'=>'Users', 'options'=>$result, 'default'=>'3'));
+				?>
 			</div>
 
 			<!-- New-Message -->
