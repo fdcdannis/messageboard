@@ -18,6 +18,7 @@
 					<?php echo $this->Form->input('Upload',['type'=>'file']);?>
 				</span>
 				<?php
+					// echo $this->Form->input('email');
 					echo $this->Form->input('firstname');
 					echo $this->Form->input('lastname');
 					echo $this->Form->input('gender');

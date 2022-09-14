@@ -2,12 +2,6 @@
 
 class UsersController extends AppController {
 
-	public $paginate = array(
-        'limit' => 25,
-        'conditions' => array('status' => '1'),
-    	'order' => array('User.name' => 'asc' )
-    );
-
     public function beforeFilter() {
         parent::beforeFilter();
         $this->Auth->allow('login','register', 'thankyou');
@@ -31,8 +25,37 @@ class UsersController extends AppController {
 	}
 
 	public function myaccount() {
-		$user = $this->User->findById(AuthComponent::user('id'));
-		$this->set(compact('user'));
+		$id = AuthComponent::user('id');
+
+		// pr($id);
+
+		if (!$id) {
+			$this->Session->setFlash('Please provide a user id');
+			$this->redirect(array('action'=>'index'));
+		}
+
+		// pr($this->User->findById($id));
+
+		$user = $this->User->findById($id);
+		if (!$user) {
+			$this->Session->setFlash('Invalid User ID Provided');
+			$this->redirect(array('action'=>'index'));
+		}
+
+		if ($this->request->is('post') || $this->request->is('put')) {
+			$this->User->id = $id;
+			pr($this->User->id);
+			if ($this->User->save($this->request->data)) {
+				$this->Session->setFlash(__('The user has been updated'));
+				$this->redirect(array('action' => 'myaccount', $id));
+			}else{
+				$this->Session->setFlash(__('Unable to update your user.'));
+			}
+		}
+
+		if (!$this->request->data) {
+			$this->request->data = $user;
+		}
 	}
 
 	public function login() {
@@ -43,7 +66,8 @@ class UsersController extends AppController {
 		}
 
 		if($this->request->is('post')) {
-
+			
+			$id = AuthComponent::user('id');
 			// $this->Auth->authenticate['Form'] = array('fields' => array('username' => 'email'));
 
 			if($this->Auth->login()) {
@@ -101,28 +125,7 @@ class UsersController extends AppController {
 			$target = WWW_ROOT.'img'.DS;
         	$target = $target.basename($image);
 
-			// pr($frmData);
-			// pr($tmp);
-			// pr($target);
-			// pr($image);
-
-			if (move_uploaded_file($tmp, $target)) {
-				// echo "Successfully moved";
-				// $this->Session->setFlash(__('Success'));
-
-				// $picture = $this->User->newEntity();
-				// $picture->profile_pic = $image;
-
-				// pr($picture->profile_pic);
-
-				// $this->User->save($picture);
-			} else {
-				// $this->Session->setFlash(__('Error'));
-				// echo "Error";
-			}
-
-			// pr($image);
-			// pr($this->request->data['User']['profile_pic'] = $image);
+			move_uploaded_file($tmp, $target);
 
 			$this->request->data['User']['profile_pic'] = $image;
 

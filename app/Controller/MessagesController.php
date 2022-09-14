@@ -76,6 +76,7 @@ class MessagesController extends AppController {
 				FROM    Users AS User
 				JOIN    Messages AS Message
 				ON Message.message_to_userid = $user_id AND User.id = Message.message_from_user_id AND Message.reply_flag = 0				
+				WHERE Message.message_details LIKE '%$search%'
 				ORDER BY message_created desc
 				LIMIT 2
 		");
@@ -99,7 +100,7 @@ class MessagesController extends AppController {
 				FROM    Users AS User
 				JOIN    Messages AS Message
 				ON Message.message_to_userid = $user_id AND User.id = Message.message_from_user_id AND Message.reply_flag = 0
-				
+				WHERE Message.message_details LIKE '%$search%'
 				ORDER BY message_created desc
 				LIMIT 2
 		");
