@@ -2,14 +2,15 @@
 
 class MessagesController extends AppController {
 
+
+	public $components = array(
+        'RequestHandler'
+    );
+
 	public $paginate = array(
         'limit' => 25,
         'conditions' => array('status' => '1'),
     	'order' => array('User.name' => 'asc' )
-    );
-
-	public $components = array(
-        'RequestHandler'
     );
 
     public function beforeFilter() {
@@ -17,10 +18,8 @@ class MessagesController extends AppController {
         $this->Auth->allow('login','register', 'thankyou');
     }
 
-    public function messagelist($id = null) {
+    public function messagelist() {
 		// pr($id);
-
-		$this->Message->deleteAll(array('Message.id'=>$id));
 
         $user_id = AuthComponent::user('id');
 		$messages = $this->Message->query("
@@ -34,25 +33,86 @@ class MessagesController extends AppController {
 				JOIN    Messages AS Message
 				ON Message.message_to_userid = $user_id AND User.id = Message.message_from_user_id AND Message.reply_flag = 0
 				ORDER BY message_created desc
+				LIMIT 2
 		");
+		$this->set(compact('messages'));
+    }
 
-		$test = $this->Message->query("
-
+	public function loadmore($limit = null) {
+		
+        $user_id = AuthComponent::user('id');
+		$messages = $this->Message->query("
 				SELECT  *
 				FROM    Users AS User
 				JOIN    Messages AS Message
 				ON Message.message_from_user_id = $user_id AND User.id = Message.message_from_user_id AND Message.reply_flag = 0
-				ORDER BY Message.message_created asc
+				UNION ALL
+				SELECT  *
+				FROM    Users AS User
+				JOIN    Messages AS Message
+				ON Message.message_to_userid = $user_id AND User.id = Message.message_from_user_id AND Message.reply_flag = 0
+				ORDER BY message_created desc
+				LIMIT $limit
 		");
 
-		// pr($messages);
+		$this->set(compact('messages'));
+    }
 
-		// pr($messages);
+	public function search($search = null) {
+
+        $user_id = AuthComponent::user('id');
+
+		// pr($search);
+		// pr($user_id);
+
+		$messages = $this->Message->query("
+				SELECT  *
+				FROM    Users AS User
+				JOIN    Messages AS Message
+				ON Message.message_from_user_id = $user_id AND User.id = Message.message_from_user_id AND Message.reply_flag = 0
+				WHERE Message.message_details LIKE '%$search%'
+				UNION ALL
+				SELECT  *
+				FROM    Users AS User
+				JOIN    Messages AS Message
+				ON Message.message_to_userid = $user_id AND User.id = Message.message_from_user_id AND Message.reply_flag = 0				
+				ORDER BY message_created desc
+				LIMIT 2
+		");
+
+		$this->set(compact('messages'));
+    }
+
+	public function deletemessage($id = null) {
+
+        $this->Message->deleteAll(array('Message.id'=>$id));
+
+		$user_id = AuthComponent::user('id');
+		$messages = $this->Message->query("
+				SELECT  *
+				FROM    Users AS User
+				JOIN    Messages AS Message
+				ON Message.message_from_user_id = $user_id AND User.id = Message.message_from_user_id AND Message.reply_flag = 0
+				WHERE Message.message_details LIKE '%$search%'
+				UNION ALL
+				SELECT  *
+				FROM    Users AS User
+				JOIN    Messages AS Message
+				ON Message.message_to_userid = $user_id AND User.id = Message.message_from_user_id AND Message.reply_flag = 0
+				
+				ORDER BY message_created desc
+				LIMIT 2
+		");
+
 		$this->set(compact('messages'));
     }
 
 
     public function reply($id = null, $to_user_id = null, $from_user_id = null) {
+
+		$this->set(compact('id'));
+		$this->set(compact('to_user_id'));
+		$this->set(compact('from_user_id'));
 
 		$user_id = AuthComponent::user('id');
 		$currDateTime = date("Y-m-d H:i:s");
@@ -73,33 +133,81 @@ class MessagesController extends AppController {
 				JOIN    Users AS User
 				ON Message.message_to_userid = $user_id AND User.id = Message.message_from_user_id AND (Message.id = $id OR Message.reply_id = $id)
 				ORDER BY message_created desc
+				LIMIT 2			
 		");
 
-        // pr($messages);
+		$this->set(compact('messages'));
+    }
 
-		if ($this->request->is('post')) {
-			$this->Message->create();
+	public function loadmorereply($id = null, $to_user_id = null, $from_user_id = null, $limit = null) {
 
-			$this->request->data['Message']['reply_flag'] = 1;
-			$this->request->data['Message']['reply_id'] = $id;
-			$this->request->data['Message']['message_id'] = $id;
-			$this->request->data['Message']['message_from_user_id'] = $user_id;
-			$this->request->data['Message']['message_created'] = $currDateTime;
+		$this->set(compact('id'));
+		$this->set(compact('to_user_id'));
+		$this->set(compact('from_user_id'));
 
-			if($to_user_id == $user_id){
-				$this->request->data['Message']['message_to_userid'] = $from_user_id;
-			} else {
-				$this->request->data['Message']['message_to_userid'] = $to_user_id;
-			}
+		$user_id = AuthComponent::user('id');
+		$currDateTime = date("Y-m-d H:i:s");
 
-			if ($this->Message->save($this->request->data)) {
-				// $this->Session->setFlash(__('The user has been created'));
-				$this->redirect(array('action' => 'reply', $id, $to_user_id, $from_user_id));
-				// $this->redirect(['controller' => 'messages', 'action' => 'reply', '?' => ['param1' => '1', 'param2' => '2']]);
-			} else {
-				// $this->Session->setFlash(__('The user could not be created. Please, try again.'));
-			}
-        }
+		if (!$id) {
+			$this->Session->setFlash('Please provide a user id');
+			$this->redirect(array('action'=>'index'));
+		}
+
+		$messages = $this->Message->query("
+				SELECT  *
+				FROM    Messages AS Message
+				JOIN    Users AS User
+				ON Message.message_from_user_id = $user_id AND User.id = Message.message_from_user_id AND (Message.id = $id OR Message.reply_id = $id)
+				UNION
+				SELECT  *
+				FROM    Messages AS Message
+				JOIN    Users AS User
+				ON Message.message_to_userid = $user_id AND User.id = Message.message_from_user_id AND (Message.id = $id OR Message.reply_id = $id)
+				ORDER BY message_created desc
+				LIMIT $limit			
+		");
+
+		$this->set(compact('messages'));
+    }
+
+	public function replymessages($id = null, $to_user_id = null, $from_user_id = null, $reply_messages = null) {
+
+		$user_id = AuthComponent::user('id');
+		$currDateTime = date("Y-m-d H:i:s");
+
+		if (!$id) {
+			$this->Session->setFlash('Please provide a user id');
+			$this->redirect(array('action'=>'index'));
+		}
+
+		$this->request->data['Message']['reply_flag'] = 1;
+		$this->request->data['Message']['reply_id'] = $id;
+		$this->request->data['Message']['message_id'] = $id;
+		$this->request->data['Message']['message_details'] = $reply_messages;
+		$this->request->data['Message']['message_from_user_id'] = $user_id;
+		$this->request->data['Message']['message_created'] = $currDateTime;
+
+		if($to_user_id == $user_id){
+			$this->request->data['Message']['message_to_userid'] = $from_user_id;
+		} else {
+			$this->request->data['Message']['message_to_userid'] = $to_user_id;
+		}
+
+		$this->Message->save($this->request->data);
+
+		$messages = $this->Message->query("
+				SELECT  *
+				FROM    Messages AS Message
+				JOIN    Users AS User
+				ON Message.message_from_user_id = $user_id AND User.id = Message.message_from_user_id AND (Message.id = $id OR Message.reply_id = $id)
+				UNION
+				SELECT  *
+				FROM    Messages AS Message
+				JOIN    Users AS User
+				ON Message.message_to_userid = $user_id AND User.id = Message.message_from_user_id AND (Message.id = $id OR Message.reply_id = $id)
+				ORDER BY message_created desc
+				LIMIT 2
+		");
 
 		$this->set(compact('messages'));
     }
@@ -111,14 +219,11 @@ class MessagesController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Message->create();
 
-			// $this->request->data['Message']['message_id'] = $user_id;
 			$this->request->data['Message']['message_from_user_id'] = $user_id;
 			$this->request->data['Message']['reply_flag'] = 0;
 			$this->request->data['Message']['message_id'] = $user_id;
 			$this->request->data['Message']['reply_id'] = 0;
 			$this->request->data['Message']['message_created'] = $currDateTime;
-
-			// pr($this->request->data);
 
 			if ($this->Message->save($this->request->data)) {
 				$this->redirect(array('action' => 'messagelist'));
@@ -135,57 +240,6 @@ class MessagesController extends AppController {
 
 		$this->set(compact('result'));
     }
-
-    public function edit($id = null) {
-		if (!$id) {
-			$this->Session->setFlash('Please provide a user id');
-			$this->redirect(array('action'=>'index'));
-		}
-
-		$user = $this->User->findById($id);
-		if (!$user) {
-			$this->Session->setFlash('Invalid User ID Provided');
-			$this->redirect(array('action'=>'index'));
-		}
-
-		if ($this->request->is('post') || $this->request->is('put')) {
-			$frmData = $this->request->data['User'];
-			$tmp = $frmData['Upload']['tmp_name'];
-
-			//Get the data from form
-			$hash = rand();
-			$date = date("Ymd");
-			$image = $date.$hash."-".$frmData['Upload']['name'];
-
-			//Path to store upload image
-			$target = WWW_ROOT.'img'.DS;
-        	$target = $target.basename($image);
-
-			if (move_uploaded_file($tmp, $target)) { } else { }
-
-			$this->request->data['User']['profile_pic'] = $image;
-
-			if ($this->User->save($this->request->data)) {
-				$this->Session->setFlash(__('The user has been updated'));
-				$this->redirect(array('action' => 'myprofile'));
-			}else{
-				$this->Session->setFlash(__('Unable to update your user.'));
-			}
-		}
-
-		if (!$this->request->data) {
-			$this->request->data = $user;
-		}
-    }
-
-    public function deletemessage($id = null) {
-
-		pr($id);
-
-		$this->Message->deleteAll(array('Message.id'=>$id));
-		// $this->redirect(array('action' => 'messagelist'));
-    }
-
 }
 
 ?>

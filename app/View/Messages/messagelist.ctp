@@ -12,10 +12,11 @@
 	</div>
 
 	<div class="search-message">
-		<input type="" class="" id=""></input>
-		<button type="button" id="" class="">Search</button>
+		<p class="">Search Message:</p>
+		<input type="" class="" id="message-search"></input>
 	</div>
-
+		
+	<div id="result" class="">
 	<?php foreach($messages as $message): ?>
 
 		<div class="message-list-contain-<?php echo $message['0']['id'] ?>">
@@ -73,25 +74,68 @@
 		</div>
 	<?php endforeach; ?>
 	<?php unset($message); ?>
+	</div>
+
+	<div class="load-more-btn">
+		<button id="" class="" type="button" value="2">Show More</button>
+	</div>
 </div>
 
 <script type="text/javascript">
-	$(document).on('click','.delete-btn > button',function(){
-		var id= $(this).val();
 
-		var result = confirm('Are you sure you want to delete this?');
-		// console.log(id);
-		if(result) {
-			$.ajax({
-				type: "POST",
-				url: '/messageboard/messages/messagelist/'+id, //generate cakephp url
-				data: '{"id":"' + id+'"}',
-				dataType: "json",
-				success:function(resp){//reso is msg string returned from controller.
-					alert(resp);
-				}
-			});
-			$(".message-list-contain-"+id).remove();
-		}
+	// Delete Messages AJAX
+	$(document).ready(function() {
+		$(document).on('click','.delete-btn > button',function(){
+			var result = confirm('Are you sure you want to delete this?');
+			if(result) {
+				$.ajax({
+					url: "<?php echo Router::url( array("controller" => "messages", "action" => "deletemessage" )); ?>/" + $(this).val(),
+					type: 'post',
+					data: { name: "John" }
+				}).done( function(data) {
+					console.log(data);
+					$( "#result" ).html( data );
+				});
+			}
+		});
 	});
+
+	// Search Messages Ajax
+	$(document).ready(function() {
+		$('#message-search').keyup(function () {
+			console.log($(this).val())
+			$.ajax({
+				url: "<?php echo Router::url( array("controller" => "messages", "action" => "search" )); ?>/" + $(this).val(),
+				type: 'post',
+				data: { name: "John" }
+			}).success( function(data) {
+				// console.log(data);
+				$( "#result" ).html( data );
+			});
+		});
+	});
+
+	// Load More Messages Ajax
+	$(document).ready(function() {
+		$(document).on('click','.load-more-btn > button',function(){
+
+			var loadmore_limit = 2 + Number($(this).val());
+
+			$(this).attr('value', loadmore_limit); //versions older than 1.6
+
+			console.log(loadmore_limit);
+
+			// console.log("<?php echo Router::url( array("controller" => "messages", "action" => "loadmore" )); ?>/" + loadmore_limit);
+
+			$.ajax({				
+				url: "<?php echo Router::url( array("controller" => "messages", "action" => "loadmore" )); ?>/" + loadmore_limit,
+				type: 'post',
+				data: { name: "John" }
+			}).done( function(data) {
+				// console.log(data);
+				$( "#result" ).html( data );
+			});
+		});
+	});
+
 </script>

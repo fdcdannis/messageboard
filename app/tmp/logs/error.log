@@ -9538,3 +9538,782 @@ Request URL: /messageboard/userprofile/1/2
 Stack Trace:
 #0 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2022-09-14 03:56:55 Error: [MissingControllerException] Controller class MessageController could not be found.
+Exception Attributes: array (
+  'class' => 'MessageController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/message/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-14 03:56:55 Error: [MissingControllerException] Controller class MessageController could not be found.
+Exception Attributes: array (
+  'class' => 'MessageController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/message/11
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-14 03:56:55 Error: [MissingControllerException] Controller class MessageController could not be found.
+Exception Attributes: array (
+  'class' => 'MessageController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/message/111
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-14 03:56:57 Error: [MissingControllerException] Controller class MessageController could not be found.
+Exception Attributes: array (
+  'class' => 'MessageController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/message/2
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-14 03:56:57 Error: [MissingControllerException] Controller class MessageController could not be found.
+Exception Attributes: array (
+  'class' => 'MessageController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/message/22
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-14 03:57:00 Error: [MissingControllerException] Controller class MessageController could not be found.
+Exception Attributes: array (
+  'class' => 'MessageController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/message/3
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-14 03:57:00 Error: [MissingControllerException] Controller class MessageController could not be found.
+Exception Attributes: array (
+  'class' => 'MessageController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/message/33
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-14 03:57:00 Error: [MissingControllerException] Controller class MessageController could not be found.
+Exception Attributes: array (
+  'class' => 'MessageController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/message/333
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-14 03:57:07 Error: [MissingControllerException] Controller class MessageController could not be found.
+Exception Attributes: array (
+  'class' => 'MessageController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/message/333
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-14 03:57:14 Error: [MissingControllerException] Controller class MessageController could not be found.
+Exception Attributes: array (
+  'class' => 'MessageController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/message/search/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-14 03:57:15 Error: [MissingControllerException] Controller class MessageController could not be found.
+Exception Attributes: array (
+  'class' => 'MessageController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/message/search/11
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-14 03:57:15 Error: [MissingControllerException] Controller class MessageController could not be found.
+Exception Attributes: array (
+  'class' => 'MessageController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/message/search/111
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-14 03:57:16 Error: [MissingControllerException] Controller class MessageController could not be found.
+Exception Attributes: array (
+  'class' => 'MessageController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/message/search/111
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-14 03:58:56 Error: [MissingControllerException] Controller class MessageController could not be found.
+Exception Attributes: array (
+  'class' => 'MessageController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/message/search/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-14 03:59:00 Error: [MissingControllerException] Controller class MessageController could not be found.
+Exception Attributes: array (
+  'class' => 'MessageController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/message/search/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-14 03:59:04 Error: [MissingControllerException] Controller class MessageController could not be found.
+Exception Attributes: array (
+  'class' => 'MessageController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/message/search/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-14 03:59:29 Error: [MissingControllerException] Controller class MessageController could not be found.
+Exception Attributes: array (
+  'class' => 'MessageController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/message/search/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-14 04:05:02 Error: [ParseError] syntax error, unexpected '(', expecting variable (T_VARIABLE) or '{' or '$'
+Request URL: /messageboard/messagelist
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/View/View.php(933): View->_evaluate('/Applications/X...', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/View/View.php(473): View->_render('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(968): View->render(NULL, NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2022-09-14 04:05:19 Error: [ParseError] syntax error, unexpected '(', expecting variable (T_VARIABLE) or '{' or '$'
+Request URL: /messageboard/messagelist
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/View/View.php(933): View->_evaluate('/Applications/X...', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/View/View.php(473): View->_render('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(968): View->render(NULL, NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2022-09-14 04:05:20 Error: [ParseError] syntax error, unexpected '(', expecting variable (T_VARIABLE) or '{' or '$'
+Request URL: /messageboard/messagelist
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/View/View.php(933): View->_evaluate('/Applications/X...', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/View/View.php(473): View->_render('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(968): View->render(NULL, NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2022-09-14 04:06:29 Error: [ParseError] syntax error, unexpected '(', expecting variable (T_VARIABLE) or '{' or '$'
+Request URL: /messageboard/messagelist
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/View/View.php(933): View->_evaluate('/Applications/X...', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/View/View.php(473): View->_render('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(968): View->render(NULL, NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2022-09-14 04:06:32 Error: [ParseError] syntax error, unexpected '(', expecting variable (T_VARIABLE) or '{' or '$'
+Request URL: /messageboard/messagelist
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/View/View.php(933): View->_evaluate('/Applications/X...', Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/View/View.php(473): View->_render('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(968): View->render(NULL, NULL)
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2022-09-14 04:37:40 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE message_details LIKE 'j%' '1%/' at line 11
+Request URL: /messageboard/messages/search/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('SELECT  *\n\t\t\t\tF...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(715): DboSource->execute('\n\t\t\t\tSELECT  *\n...', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(641): DboSource->fetchAll('\n\t\t\t\tSELECT  *\n...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(3489): DboSource->query('\n\t\t\t\tSELECT  *\n...', false)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(76): Model->query('\n\t\t\t\tSELECT  *\n...')
+#6 [internal function]: MessagesController->search('1')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-14 04:37:42 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE message_details LIKE 'j%' '2%/' at line 11
+Request URL: /messageboard/messages/search/2
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('SELECT  *\n\t\t\t\tF...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(715): DboSource->execute('\n\t\t\t\tSELECT  *\n...', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(641): DboSource->fetchAll('\n\t\t\t\tSELECT  *\n...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(3489): DboSource->query('\n\t\t\t\tSELECT  *\n...', false)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(76): Model->query('\n\t\t\t\tSELECT  *\n...')
+#6 [internal function]: MessagesController->search('2')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-14 04:38:00 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE message_details LIKE 'j%' '1%/' at line 11
+Request URL: /messageboard/messages/search/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('SELECT  *\n\t\t\t\tF...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(715): DboSource->execute('\n\t\t\t\tSELECT  *\n...', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(641): DboSource->fetchAll('\n\t\t\t\tSELECT  *\n...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(3489): DboSource->query('\n\t\t\t\tSELECT  *\n...', false)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(76): Model->query('\n\t\t\t\tSELECT  *\n...')
+#6 [internal function]: MessagesController->search('1')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-14 04:38:01 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE message_details LIKE 'j%' '2%/' at line 11
+Request URL: /messageboard/messages/search/2
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('SELECT  *\n\t\t\t\tF...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(715): DboSource->execute('\n\t\t\t\tSELECT  *\n...', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(641): DboSource->fetchAll('\n\t\t\t\tSELECT  *\n...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(3489): DboSource->query('\n\t\t\t\tSELECT  *\n...', false)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(76): Model->query('\n\t\t\t\tSELECT  *\n...')
+#6 [internal function]: MessagesController->search('2')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-14 04:38:03 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE message_details LIKE 'j%' '3%/' at line 11
+Request URL: /messageboard/messages/search/3
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('SELECT  *\n\t\t\t\tF...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(715): DboSource->execute('\n\t\t\t\tSELECT  *\n...', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(641): DboSource->fetchAll('\n\t\t\t\tSELECT  *\n...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(3489): DboSource->query('\n\t\t\t\tSELECT  *\n...', false)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(76): Model->query('\n\t\t\t\tSELECT  *\n...')
+#6 [internal function]: MessagesController->search('3')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-14 04:38:07 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE message_details LIKE 'j%' '3%/' at line 11
+Request URL: /messageboard/messages/search/3
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('SELECT  *\n\t\t\t\tF...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(715): DboSource->execute('\n\t\t\t\tSELECT  *\n...', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(641): DboSource->fetchAll('\n\t\t\t\tSELECT  *\n...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(3489): DboSource->query('\n\t\t\t\tSELECT  *\n...', false)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(76): Model->query('\n\t\t\t\tSELECT  *\n...')
+#6 [internal function]: MessagesController->search('3')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-14 04:38:15 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE message_details LIKE 'j%' '3%/' at line 11
+Request URL: /messageboard/messages/search/3
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('SELECT  *\n\t\t\t\tF...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(715): DboSource->execute('\n\t\t\t\tSELECT  *\n...', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(641): DboSource->fetchAll('\n\t\t\t\tSELECT  *\n...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(3489): DboSource->query('\n\t\t\t\tSELECT  *\n...', false)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(76): Model->query('\n\t\t\t\tSELECT  *\n...')
+#6 [internal function]: MessagesController->search('3')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-14 04:38:58 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE message_details LIKE '1%/' at line 11
+Request URL: /messageboard/messages/search/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('SELECT  *\n\t\t\t\tF...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(715): DboSource->execute('\n\t\t\t\tSELECT  *\n...', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(641): DboSource->fetchAll('\n\t\t\t\tSELECT  *\n...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(3489): DboSource->query('\n\t\t\t\tSELECT  *\n...', false)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(76): Model->query('\n\t\t\t\tSELECT  *\n...')
+#6 [internal function]: MessagesController->search('1')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-14 04:39:14 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE message_details LIKE 'j%/' at line 11
+Request URL: /messageboard/messages/search/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('SELECT  *\n\t\t\t\tF...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(715): DboSource->execute('\n\t\t\t\tSELECT  *\n...', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(641): DboSource->fetchAll('\n\t\t\t\tSELECT  *\n...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(3489): DboSource->query('\n\t\t\t\tSELECT  *\n...', false)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(74): Model->query('\n\t\t\t\tSELECT  *\n...')
+#6 [internal function]: MessagesController->search('1')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-14 04:39:51 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE message_details LIKE 'j%/' at line 11
+Request URL: /messageboard/messages/search/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('SELECT  *\n\t\t\t\tF...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(715): DboSource->execute('\n\t\t\t\tSELECT  *\n...', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(641): DboSource->fetchAll('\n\t\t\t\tSELECT  *\n...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(3489): DboSource->query('\n\t\t\t\tSELECT  *\n...', false)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(74): Model->query('\n\t\t\t\tSELECT  *\n...')
+#6 [internal function]: MessagesController->search('1')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-14 04:39:52 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE message_details LIKE 'j%/' at line 11
+Request URL: /messageboard/messages/search/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('SELECT  *\n\t\t\t\tF...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(715): DboSource->execute('\n\t\t\t\tSELECT  *\n...', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(641): DboSource->fetchAll('\n\t\t\t\tSELECT  *\n...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(3489): DboSource->query('\n\t\t\t\tSELECT  *\n...', false)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(74): Model->query('\n\t\t\t\tSELECT  *\n...')
+#6 [internal function]: MessagesController->search('1')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-14 04:43:30 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'JOIN    Messages AS Message
+				ON Message.message_from_user_id = 2 AND User....' at line 4
+Request URL: /messageboard/messages/search/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('SELECT  *\n\t\t\t\tF...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(715): DboSource->execute('\n\t\t\t\tSELECT  *\n...', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(641): DboSource->fetchAll('\n\t\t\t\tSELECT  *\n...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(3489): DboSource->query('\n\t\t\t\tSELECT  *\n...', false)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(75): Model->query('\n\t\t\t\tSELECT  *\n...')
+#6 [internal function]: MessagesController->search('1')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-14 04:43:36 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'JOIN    Messages AS Message
+				ON Message.message_from_user_id = 2 AND User....' at line 4
+Request URL: /messageboard/messages/search/2
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('SELECT  *\n\t\t\t\tF...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(715): DboSource->execute('\n\t\t\t\tSELECT  *\n...', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(641): DboSource->fetchAll('\n\t\t\t\tSELECT  *\n...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(3489): DboSource->query('\n\t\t\t\tSELECT  *\n...', false)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(75): Model->query('\n\t\t\t\tSELECT  *\n...')
+#6 [internal function]: MessagesController->search('2')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-14 04:46:36 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'test' in 'where clause'
+Request URL: /messageboard/messages/search/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('SELECT  *\n\t\t\t\tF...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(715): DboSource->execute('\n\t\t\t\tSELECT  *\n...', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(641): DboSource->fetchAll('\n\t\t\t\tSELECT  *\n...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(3489): DboSource->query('\n\t\t\t\tSELECT  *\n...', false)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(75): Model->query('\n\t\t\t\tSELECT  *\n...')
+#6 [internal function]: MessagesController->search('1')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-14 04:46:37 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'test' in 'where clause'
+Request URL: /messageboard/messages/search/12
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('SELECT  *\n\t\t\t\tF...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(715): DboSource->execute('\n\t\t\t\tSELECT  *\n...', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(641): DboSource->fetchAll('\n\t\t\t\tSELECT  *\n...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(3489): DboSource->query('\n\t\t\t\tSELECT  *\n...', false)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(75): Model->query('\n\t\t\t\tSELECT  *\n...')
+#6 [internal function]: MessagesController->search('12')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-14 04:46:37 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'test' in 'where clause'
+Request URL: /messageboard/messages/search/122
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('SELECT  *\n\t\t\t\tF...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(715): DboSource->execute('\n\t\t\t\tSELECT  *\n...', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(641): DboSource->fetchAll('\n\t\t\t\tSELECT  *\n...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(3489): DboSource->query('\n\t\t\t\tSELECT  *\n...', false)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(75): Model->query('\n\t\t\t\tSELECT  *\n...')
+#6 [internal function]: MessagesController->search('122')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-14 04:46:38 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'test' in 'where clause'
+Request URL: /messageboard/messages/search/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('SELECT  *\n\t\t\t\tF...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(715): DboSource->execute('\n\t\t\t\tSELECT  *\n...', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(641): DboSource->fetchAll('\n\t\t\t\tSELECT  *\n...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(3489): DboSource->query('\n\t\t\t\tSELECT  *\n...', false)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(75): Model->query('\n\t\t\t\tSELECT  *\n...')
+#6 [internal function]: MessagesController->search()
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-14 04:46:39 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'test' in 'where clause'
+Request URL: /messageboard/messages/search/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('SELECT  *\n\t\t\t\tF...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(715): DboSource->execute('\n\t\t\t\tSELECT  *\n...', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(641): DboSource->fetchAll('\n\t\t\t\tSELECT  *\n...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(3489): DboSource->query('\n\t\t\t\tSELECT  *\n...', false)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(75): Model->query('\n\t\t\t\tSELECT  *\n...')
+#6 [internal function]: MessagesController->search()
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-14 04:53:44 Error: Fatal Error (64): Cannot redeclare MessagesController::deletemessage() in [/Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php, line 227]
+2022-09-14 04:53:44 Error: [FatalErrorException] Cannot redeclare MessagesController::deletemessage()
+Request URL: /messageboard/messages/search/2
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', '/Applications/X...', 227)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Core/App.php(970): ErrorHandler::handleError(64, 'Cannot redeclar...', '/Applications/X...', 227, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2022-09-14 04:53:45 Error: Fatal Error (64): Cannot redeclare MessagesController::deletemessage() in [/Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php, line 227]
+2022-09-14 04:53:45 Error: [FatalErrorException] Cannot redeclare MessagesController::deletemessage()
+Request URL: /messageboard/messages/search/22
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', '/Applications/X...', 227)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Core/App.php(970): ErrorHandler::handleError(64, 'Cannot redeclar...', '/Applications/X...', 227, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2022-09-14 04:53:46 Error: Fatal Error (64): Cannot redeclare MessagesController::deletemessage() in [/Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php, line 227]
+2022-09-14 04:53:46 Error: [FatalErrorException] Cannot redeclare MessagesController::deletemessage()
+Request URL: /messageboard/messagelist
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', '/Applications/X...', 227)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Core/App.php(970): ErrorHandler::handleError(64, 'Cannot redeclar...', '/Applications/X...', 227, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2022-09-14 04:54:20 Error: Fatal Error (64): Cannot redeclare MessagesController::deletemessage() in [/Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php, line 227]
+2022-09-14 04:54:20 Error: [FatalErrorException] Cannot redeclare MessagesController::deletemessage()
+Request URL: /messageboard/messagelist
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', '/Applications/X...', 227)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Core/App.php(970): ErrorHandler::handleError(64, 'Cannot redeclar...', '/Applications/X...', 227, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2022-09-14 04:55:44 Error: Fatal Error (64): Cannot redeclare MessagesController::deletemessage() in [/Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php, line 227]
+2022-09-14 04:55:44 Error: [FatalErrorException] Cannot redeclare MessagesController::deletemessage()
+Request URL: /messageboard/messagelist
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', '/Applications/X...', 227)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Core/App.php(970): ErrorHandler::handleError(64, 'Cannot redeclar...', '/Applications/X...', 227, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2022-09-14 04:58:09 Error: Fatal Error (64): Cannot redeclare MessagesController::deletemessage() in [/Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php, line 227]
+2022-09-14 04:58:09 Error: [FatalErrorException] Cannot redeclare MessagesController::deletemessage()
+Request URL: /messageboard/messagelist
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', '/Applications/X...', 227)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Core/App.php(970): ErrorHandler::handleError(64, 'Cannot redeclar...', '/Applications/X...', 227, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2022-09-14 04:58:15 Error: Fatal Error (64): Cannot redeclare MessagesController::deletemessage() in [/Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php, line 227]
+2022-09-14 04:58:15 Error: [FatalErrorException] Cannot redeclare MessagesController::deletemessage()
+Request URL: /messageboard/messagelist
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Error/ErrorHandler.php(212): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', '/Applications/X...', 227)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Core/App.php(970): ErrorHandler::handleError(64, 'Cannot redeclar...', '/Applications/X...', 227, Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Core/App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2022-09-14 04:58:32 Error: [MissingControllerException] Controller class DeletemessageController could not be found.
+Exception Attributes: array (
+  'class' => 'DeletemessageController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/deletemessage/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-14 04:59:09 Error: [MissingControllerException] Controller class DeletemessageController could not be found.
+Exception Attributes: array (
+  'class' => 'DeletemessageController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/deletemessage/1
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-14 04:59:10 Error: [MissingControllerException] Controller class DeletemessageController could not be found.
+Exception Attributes: array (
+  'class' => 'DeletemessageController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/deletemessage/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-14 04:59:21 Error: [MissingControllerException] Controller class MessagelistController could not be found.
+Exception Attributes: array (
+  'class' => 'MessagelistController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/messagelist/deletemessage
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-14 05:16:30 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'message_details' doesn't have a default value
+Request URL: /messageboard/messages/reply/108/1/2
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('INSERT INTO `me...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(1132): DboSource->execute('INSERT INTO `me...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Message), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(145): Model->save(Array)
+#6 [internal function]: MessagesController->reply('108', '1', '2')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-14 05:17:34 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'message_details' doesn't have a default value
+Request URL: /messageboard/messages/reply/108/1/2
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('INSERT INTO `me...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(1132): DboSource->execute('INSERT INTO `me...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Message), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(145): Model->save(Array)
+#6 [internal function]: MessagesController->reply('108', '1', '2')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-14 05:19:10 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND User.id = Message.message_from_user_id AND (Message.id = 108 OR Message.r...' at line 4
+Request URL: /messageboard/messages/reply/108/1/2
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('SELECT  *\n\t\t\t\tF...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(715): DboSource->execute('\n\t\t\t\tSELECT  *\n...', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(641): DboSource->fetchAll('\n\t\t\t\tSELECT  *\n...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(3489): DboSource->query('\n\t\t\t\tSELECT  *\n...', false)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(124): Model->query('\n\t\t\t\tSELECT  *\n...')
+#6 [internal function]: MessagesController->reply('108', '1', '2')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-14 05:20:33 Error: [ParseError] syntax error, unexpected '$this' (T_VARIABLE), expecting function (T_FUNCTION) or const (T_CONST)
+Request URL: /messageboard/messagelist
+Stack Trace:
+#0 [internal function]: App::load('MessagesControl...')
+#1 [internal function]: spl_autoload_call('MessagesControl...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(266): class_exists('MessagesControl...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2022-09-14 05:20:59 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'message_details' doesn't have a default value
+Request URL: /messageboard/messages/reply/108/1/2
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('INSERT INTO `me...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(1132): DboSource->execute('INSERT INTO `me...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Message), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(145): Model->save(Array)
+#6 [internal function]: MessagesController->reply('108', '1', '2')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-14 05:22:56 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'message_details' doesn't have a default value
+Request URL: /messageboard/messages/reply/108/1/2
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('INSERT INTO `me...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(1132): DboSource->execute('INSERT INTO `me...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Message), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(145): Model->save(Array)
+#6 [internal function]: MessagesController->reply('108', '1', '2')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-14 05:23:00 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'message_details' doesn't have a default value
+Request URL: /messageboard/messages/reply/108/1/2
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('INSERT INTO `me...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(1132): DboSource->execute('INSERT INTO `me...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Message), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(145): Model->save(Array)
+#6 [internal function]: MessagesController->reply('108', '1', '2')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-14 05:23:47 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'message_details' doesn't have a default value
+Request URL: /messageboard/messages/reply/108/1/2
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('INSERT INTO `me...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(1132): DboSource->execute('INSERT INTO `me...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Message), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(145): Model->save(Array)
+#6 [internal function]: MessagesController->reply('108', '1', '2')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-14 05:30:58 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'message_details' doesn't have a default value
+Request URL: /messageboard/messages/reply/127/1/2
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('INSERT INTO `me...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(1132): DboSource->execute('INSERT INTO `me...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Message), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(146): Model->save(Array)
+#6 [internal function]: MessagesController->reply('127', '1', '2')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-14 05:31:33 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'message_details' doesn't have a default value
+Request URL: /messageboard/messages/reply/127/1/2
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('INSERT INTO `me...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(1132): DboSource->execute('INSERT INTO `me...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Message), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(146): Model->save(Array)
+#6 [internal function]: MessagesController->reply('127', '1', '2')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-14 05:31:34 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'message_details' doesn't have a default value
+Request URL: /messageboard/messages/reply/127/1/2
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('INSERT INTO `me...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(1132): DboSource->execute('INSERT INTO `me...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Message), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(146): Model->save(Array)
+#6 [internal function]: MessagesController->reply('127', '1', '2')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-14 05:31:53 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'message_details' doesn't have a default value
+Request URL: /messageboard/messages/reply/127/1/2
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('INSERT INTO `me...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(1132): DboSource->execute('INSERT INTO `me...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Message), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(146): Model->save(Array)
+#6 [internal function]: MessagesController->reply('127', '1', '2')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-14 05:32:05 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'message_details' doesn't have a default value
+Request URL: /messageboard/messages/reply/127/1/2
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('INSERT INTO `me...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(1132): DboSource->execute('INSERT INTO `me...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Message), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(146): Model->save(Array)
+#6 [internal function]: MessagesController->reply('127', '1', '2')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-14 08:08:22 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 11
+Request URL: /messageboard/messages/loadmorereply/182/1/2/4
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('SELECT  *\n\t\t\t\tF...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(715): DboSource->execute('\n\t\t\t\tSELECT  *\n...', Array, Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(641): DboSource->fetchAll('\n\t\t\t\tSELECT  *\n...', Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(3489): DboSource->query('\n\t\t\t\tSELECT  *\n...', false)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(162): Model->query('\n\t\t\t\tSELECT  *\n...')
+#6 [internal function]: MessagesController->loadmorereply('182', '1', '2', '4')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
