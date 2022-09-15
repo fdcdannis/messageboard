@@ -4,7 +4,7 @@ class MessagesController extends AppController {
 
 
 	public $components = array(
-        'RequestHandler'
+        'RequestHandler'wearwaer
     );
 
 	public $paginate = array(
@@ -20,7 +20,7 @@ asdfsadfasdfasdf
 
     public function messagelist() {
 		// pr($id);
-
+asdfsdaf
         $user_id = AuthComponent::user('id');
 		$messages = $this->Message->query("
 				SELECT  *
@@ -35,7 +35,7 @@ asdfsadfasdfasdf
 				ORDER BY message_created desc
 				LIMIT 2
 		");
-		$this->set(compact('messages'));
+		$this->set(compact('messages'));asdfasfasdf
     }
 
 	public function loadmore($limit = null) {
