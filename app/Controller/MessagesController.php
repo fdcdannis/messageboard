@@ -12,7 +12,7 @@ class MessagesController extends AppController {
         'conditions' => array('status' => '1'),
     	'order' => array('User.name' => 'asc' )
     );
-
+asdfsadfasdfasdf
     public function beforeFilter() {
         parent::beforeFilter();
         $this->Auth->allow('login','register', 'thankyou');
