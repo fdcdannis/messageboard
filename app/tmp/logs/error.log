@@ -10435,3 +10435,223 @@ Stack Trace:
 #10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
 #11 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #12 {main}
+2022-09-19 22:40:43 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+',
+  'enabled' => true,
+)
+Request URL: /messageboard/messagelist
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Model\Datasource\DboSource.php(278): Mysql->connect()
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3659): ConnectionManager::getDataSource('default')
+#3 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(1162): Model->setDataSource('default')
+#4 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3686): Model->setSource('messages')
+#5 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3488): Model->getDataSource()
+#6 C:\xampp\htdocs\messageboard\app\Controller\MessagesController.php(34): Model->query('\n\t\t\t\tSELECT  *\n...')
+#7 [internal function]: MessagesController->messagelist()
+#8 C:\xampp\htdocs\messageboard\lib\Cake\Controller\Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#9 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#11 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2022-09-19 22:40:47 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+',
+  'enabled' => true,
+)
+Request URL: /messageboard/messagelist
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Model\Datasource\DboSource.php(278): Mysql->connect()
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3659): ConnectionManager::getDataSource('default')
+#3 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(1162): Model->setDataSource('default')
+#4 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3686): Model->setSource('messages')
+#5 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3488): Model->getDataSource()
+#6 C:\xampp\htdocs\messageboard\app\Controller\MessagesController.php(34): Model->query('\n\t\t\t\tSELECT  *\n...')
+#7 [internal function]: MessagesController->messagelist()
+#8 C:\xampp\htdocs\messageboard\lib\Cake\Controller\Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#9 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#11 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2022-09-19 22:40:52 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+',
+  'enabled' => true,
+)
+Request URL: /messageboard/messagelist
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Model\Datasource\DboSource.php(278): Mysql->connect()
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3659): ConnectionManager::getDataSource('default')
+#3 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(1162): Model->setDataSource('default')
+#4 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3686): Model->setSource('messages')
+#5 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3488): Model->getDataSource()
+#6 C:\xampp\htdocs\messageboard\app\Controller\MessagesController.php(34): Model->query('\n\t\t\t\tSELECT  *\n...')
+#7 [internal function]: MessagesController->messagelist()
+#8 C:\xampp\htdocs\messageboard\lib\Cake\Controller\Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#9 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#11 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2022-09-19 22:40:56 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+',
+  'enabled' => true,
+)
+Request URL: /messageboard/messagelist
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Model\Datasource\DboSource.php(278): Mysql->connect()
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3659): ConnectionManager::getDataSource('default')
+#3 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(1162): Model->setDataSource('default')
+#4 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3686): Model->setSource('messages')
+#5 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3488): Model->getDataSource()
+#6 C:\xampp\htdocs\messageboard\app\Controller\MessagesController.php(34): Model->query('\n\t\t\t\tSELECT  *\n...')
+#7 [internal function]: MessagesController->messagelist()
+#8 C:\xampp\htdocs\messageboard\lib\Cake\Controller\Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#9 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#11 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2022-09-19 22:41:00 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+',
+  'enabled' => true,
+)
+Request URL: /messageboard/users
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Model\Datasource\DboSource.php(278): Mysql->connect()
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3659): ConnectionManager::getDataSource('default')
+#3 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(1162): Model->setDataSource('default')
+#4 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3686): Model->setSource('users')
+#5 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(834): Model->getDataSource()
+#6 C:\xampp\htdocs\messageboard\app\Controller\UsersController.php(86): Model->__call('findById', Array)
+#7 [internal function]: UsersController->index()
+#8 C:\xampp\htdocs\messageboard\lib\Cake\Controller\Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2022-09-19 22:41:04 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+',
+  'enabled' => true,
+)
+Request URL: /messageboard/messagelist
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Model\Datasource\DboSource.php(278): Mysql->connect()
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3659): ConnectionManager::getDataSource('default')
+#3 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(1162): Model->setDataSource('default')
+#4 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3686): Model->setSource('messages')
+#5 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3488): Model->getDataSource()
+#6 C:\xampp\htdocs\messageboard\app\Controller\MessagesController.php(34): Model->query('\n\t\t\t\tSELECT  *\n...')
+#7 [internal function]: MessagesController->messagelist()
+#8 C:\xampp\htdocs\messageboard\lib\Cake\Controller\Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#9 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#11 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2022-09-19 22:41:08 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+',
+  'enabled' => true,
+)
+Request URL: /messageboard/messagelist
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Model\Datasource\DboSource.php(278): Mysql->connect()
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3659): ConnectionManager::getDataSource('default')
+#3 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(1162): Model->setDataSource('default')
+#4 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3686): Model->setSource('messages')
+#5 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3488): Model->getDataSource()
+#6 C:\xampp\htdocs\messageboard\app\Controller\MessagesController.php(34): Model->query('\n\t\t\t\tSELECT  *\n...')
+#7 [internal function]: MessagesController->messagelist()
+#8 C:\xampp\htdocs\messageboard\lib\Cake\Controller\Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#9 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#11 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2022-09-19 22:41:12 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+',
+  'enabled' => true,
+)
+Request URL: /messageboard/myprofile
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Model\Datasource\DboSource.php(278): Mysql->connect()
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3659): ConnectionManager::getDataSource('default')
+#3 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(1162): Model->setDataSource('default')
+#4 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3686): Model->setSource('users')
+#5 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(834): Model->getDataSource()
+#6 C:\xampp\htdocs\messageboard\app\Controller\UsersController.php(18): Model->__call('findById', Array)
+#7 [internal function]: UsersController->myprofile()
+#8 C:\xampp\htdocs\messageboard\lib\Cake\Controller\Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2022-09-19 22:41:59 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+',
+  'enabled' => true,
+)
+Request URL: /messageboard/users
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Model\Datasource\DboSource.php(278): Mysql->connect()
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3659): ConnectionManager::getDataSource('default')
+#3 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(1162): Model->setDataSource('default')
+#4 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3686): Model->setSource('users')
+#5 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(834): Model->getDataSource()
+#6 C:\xampp\htdocs\messageboard\app\Controller\UsersController.php(86): Model->__call('findById', Array)
+#7 [internal function]: UsersController->index()
+#8 C:\xampp\htdocs\messageboard\lib\Cake\Controller\Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2022-09-19 22:42:47 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+',
+  'enabled' => true,
+)
+Request URL: /messageboard/users
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Model\Datasource\DboSource.php(278): Mysql->connect()
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Model\ConnectionManager.php(105): DboSource->__construct(Array)
+#2 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3659): ConnectionManager::getDataSource('default')
+#3 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(1162): Model->setDataSource('default')
+#4 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(3686): Model->setSource('users')
+#5 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(834): Model->getDataSource()
+#6 C:\xampp\htdocs\messageboard\app\Controller\UsersController.php(86): Model->__call('findById', Array)
+#7 [internal function]: UsersController->index()
+#8 C:\xampp\htdocs\messageboard\lib\Cake\Controller\Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#9 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
