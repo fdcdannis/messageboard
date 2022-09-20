@@ -9,24 +9,23 @@ const io = require('socket.io')(server, {
     }
 });
 
-// app.get('/', (req, res) => {
-//   res.send('<h1>Hello world</h1>');
-// });
-
-io.on('connection', (socket) => {
-  console.log('a user connected');
-  socket.on('message', data =>{
-  	io.emit('receive-message', data);
-    // console.log('Message: '+data);
-  });
-});
-
 // io.on('connection', (socket) => {
-//   socket.on('comment', (msg) => {
-//     console.log('message: ' + msg);
+//   socket.on('message', data =>{
+//   	io.emit('receive-message', data);
 //   });
 // });
 
-server.listen(4000, () => {
-    console.log('listening on *:4000');
+io.on('connection', (socket) => {
+
+    socket.on('message', (data, ) =>{
+        io.emit('receive-message', data);
+    });
+    socket.on('join', function(room) {
+        console.log(room);
+        socket.join(room);
+    });
+});
+
+server.listen(5000, () => {
+    console.log('listening on *:5000');
 });

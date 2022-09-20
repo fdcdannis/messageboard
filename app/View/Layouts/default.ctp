@@ -72,9 +72,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		<div id="footer">
 		</div>
 	</div>
-	<script src="http://localhost:4000/socket.io/socket.io.js"></script>
+	<script src="http://localhost:5000/socket.io/socket.io.js"></script>
 	<script>
-		var socket = io.connect('http://localhost:4000');
+		var socket = io.connect('http://localhost:5000');	
 
 		socket.on('receive-message', (msg) => {
 			$(document).ready(function() {

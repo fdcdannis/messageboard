@@ -61,7 +61,14 @@
 
 <script type="text/javascript">
 	// Reply Messages Ajax
+
+
 	$(document).ready(function() {
+
+		console.log($('#replyBtn').val());
+		
+		socket.emit('join', $('#replyBtn').val());
+
 		$(document).on('click','#replyBtn',function(){
 
 			var message = $('#replyMessage').val();
@@ -80,7 +87,9 @@
 				$(this).attr('value', 2);	
 				$( "#result-reply" ).html( data );
 
-				socket.emit('message', sendMessageURL);
+				// socket.emit('join', data, document.getElementById('#replyBtn').value);
+
+				socket.emit('message', sendMessageURL, $('#replyBtn').val());
 			});
 		});
 	});
