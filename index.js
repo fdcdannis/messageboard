@@ -9,12 +9,6 @@ const io = require('socket.io')(server, {
     }
 });
 
-// io.on('connection', (socket) => {
-//   socket.on('message', data =>{
-//   	io.emit('receive-message', data);
-//   });
-// });
-
 io.on('connection', (socket) => {
 
     socket.on('message', (data, ) =>{
