@@ -134,7 +134,7 @@ class MessagesController extends AppController {
 				JOIN    Users AS User
 				ON Message.message_to_userid = $user_id AND User.id = Message.message_from_user_id AND (Message.id = $id OR Message.reply_id = $id)
 				ORDER BY message_created desc
-				LIMIT 2			
+				LIMIT 10			
 		");
 
 		$this->set(compact('messages'));
@@ -207,7 +207,28 @@ class MessagesController extends AppController {
 				JOIN    Users AS User
 				ON Message.message_to_userid = $user_id AND User.id = Message.message_from_user_id AND (Message.id = $id OR Message.reply_id = $id)
 				ORDER BY message_created desc
-				LIMIT 2
+				LIMIT 10
+		");
+
+		$this->set(compact('messages'));
+    }
+
+	public function replymessages_socket($id = null, $to_user_id = null, $from_user_id = null, $reply_messages = null) {
+
+		$user_id = AuthComponent::user('id');
+
+		$messages = $this->Message->query("
+				SELECT  *
+				FROM    Messages AS Message
+				JOIN    Users AS User
+				ON Message.message_from_user_id = $user_id AND User.id = Message.message_from_user_id AND (Message.id = $id OR Message.reply_id = $id)
+				UNION
+				SELECT  *
+				FROM    Messages AS Message
+				JOIN    Users AS User
+				ON Message.message_to_userid = $user_id AND User.id = Message.message_from_user_id AND (Message.id = $id OR Message.reply_id = $id)
+				ORDER BY message_created desc
+				LIMIT 10
 		");
 
 		$this->set(compact('messages'));

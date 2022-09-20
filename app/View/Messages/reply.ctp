@@ -11,7 +11,7 @@
 		</div>
 	<?php echo $this->Form->end(); ?>
 
-	<div id="result" class="">
+	<div id="result-reply" class="">
 		<?php foreach($messages as $message): ?>
 		<div class="delete-btn">
 			<div class="">
@@ -66,6 +66,8 @@
 
 			var message = $('#replyMessage').val();
 			console.log(message);
+
+			var sendMessageURL = '<?php echo Router::url( array("controller" => "messages", "action" => "replymessages_socket" )); ?>/' + $(this).val() + "/" + message;
 			
 			// console.log($(this).val());
 			$.ajax({
@@ -76,7 +78,9 @@
 				// console.log(data);
 				$('#replyMessage').val('');
 				$(this).attr('value', 2);	
-				$( "#result" ).html( data );		
+				$( "#result-reply" ).html( data );
+
+				socket.emit('message', sendMessageURL);
 			});
 		});
 	});
@@ -97,7 +101,7 @@
 				data: { name: "John" }
 			}).done( function(data) {
 				// console.log(data);
-				$( "#result" ).html( data );
+				$( "#result-reply" ).html( data );
 			});
 		});
 	});

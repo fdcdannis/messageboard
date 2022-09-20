@@ -72,5 +72,23 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		<div id="footer">
 		</div>
 	</div>
+	<script src="http://localhost:4000/socket.io/socket.io.js"></script>
+	<script>
+		var socket = io.connect('http://localhost:4000');
+
+		socket.on('receive-message', (msg) => {
+			$(document).ready(function() {
+				$.ajax({
+					url: msg,
+					type: 'post',
+					data: { name: "test" }
+				}).done( function(data) {
+					$('#replyMessage').val('');
+					$(this).attr('value', 2);	
+					$( "#result-reply" ).html( data );
+				});
+			});
+		});
+	</script>
 </body>
 </html>

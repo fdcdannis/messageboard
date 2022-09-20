@@ -1,30 +1,32 @@
-var express = require('express');
-var socket = require('socket.io');
-
-// App setup
-var app = express();
-var server = app.listen(4000, function(){
-    console.log('listening for requests on port 4000,');
+const express = require('express');
+const app = express();
+const http = require('http');
+const server = http.createServer(app);
+const { Server } = require("socket.io");
+const io = require('socket.io')(server, {
+    cors: {
+        origin: '*',
+    }
 });
 
-// Static files
-app.use(express.static('public'));
+// app.get('/', (req, res) => {
+//   res.send('<h1>Hello world</h1>');
+// });
 
-// Socket setup & pass server
-var io = socket(server);
 io.on('connection', (socket) => {
+  console.log('a user connected');
+  socket.on('message', data =>{
+  	io.emit('receive-message', data);
+    // console.log('Message: '+data);
+  });
+});
 
-    console.log('made socket connection', socket.id);
+// io.on('connection', (socket) => {
+//   socket.on('comment', (msg) => {
+//     console.log('message: ' + msg);
+//   });
+// });
 
-    // Handle chat event
-    socket.on('chat', function(data){
-        // console.log(data);
-        io.sockets.emit('chat', data);
-    });
-
-    // Handle typing event
-    socket.on('typing', function(data){
-        socket.broadcast.emit('typing', data);
-    });
-
+server.listen(4000, () => {
+    console.log('listening on *:4000');
 });

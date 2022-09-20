@@ -10655,3 +10655,69 @@ Stack Trace:
 #10 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
 #11 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #12 {main}
+2022-09-20 09:05:43 Error: [PrivateActionException] Private Action MessagesController::_replymessages() is not directly accessible.
+Exception Attributes: array (
+  'controller' => 'MessagesController',
+  'action' => '_replymessages',
+)
+Request URL: /messageboard/messages/_replymessages/247/36/37/31
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2022-09-20 09:05:43 Error: [PrivateActionException] Private Action MessagesController::_replymessages() is not directly accessible.
+Exception Attributes: array (
+  'controller' => 'MessagesController',
+  'action' => '_replymessages',
+)
+Request URL: /messageboard/messages/_replymessages/247/36/37/31
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2022-09-20 09:07:03 Error: [PrivateActionException] Private Action MessagesController::_replymessages() is not directly accessible.
+Exception Attributes: array (
+  'controller' => 'MessagesController',
+  'action' => '_replymessages',
+)
+Request URL: /messageboard/messages/_replymessages/247/36/37/17
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2022-09-20 09:07:03 Error: [PrivateActionException] Private Action MessagesController::_replymessages() is not directly accessible.
+Exception Attributes: array (
+  'controller' => 'MessagesController',
+  'action' => '_replymessages',
+)
+Request URL: /messageboard/messages/_replymessages/247/36/37/17
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2022-09-20 09:08:10 Error: [PrivateActionException] Private Action MessagesController::_replymessages() is not directly accessible.
+Exception Attributes: array (
+  'controller' => 'MessagesController',
+  'action' => '_replymessages',
+)
+Request URL: /messageboard/messages/_replymessages/247/36/37/18
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2022-09-20 09:08:10 Error: [PrivateActionException] Private Action MessagesController::_replymessages() is not directly accessible.
+Exception Attributes: array (
+  'controller' => 'MessagesController',
+  'action' => '_replymessages',
+)
+Request URL: /messageboard/messages/_replymessages/247/36/37/18
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
