@@ -11,12 +11,13 @@ const io = require('socket.io')(server, {
 
 io.on('connection', (socket) => {
 
-    socket.on('message', (data, ) =>{
-        io.emit('receive-message', data);
+    socket.on('message', (data, data2) =>{
+        // io.emit('receive-message', data, data2);
+        socket.to(data).emit('receive-message', data2);
     });
     socket.on('join', function(room) {
-        console.log(room);
         socket.join(room);
+        console.log('test test')
     });
 });
 

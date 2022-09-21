@@ -65,18 +65,14 @@
 
 	$(document).ready(function() {
 
-		console.log($('#replyBtn').val());
-		
 		socket.emit('join', $('#replyBtn').val());
 
 		$(document).on('click','#replyBtn',function(){
 
 			var message = $('#replyMessage').val();
-			console.log(message);
 
 			var sendMessageURL = '<?php echo Router::url( array("controller" => "messages", "action" => "replymessages_socket" )); ?>/' + $(this).val() + "/" + message;
 			
-			// console.log($(this).val());
 			$.ajax({
 				url: "<?php echo Router::url( array("controller" => "messages", "action" => "replymessages" )); ?>/" + $(this).val() + "/" + message,
 				type: 'post',
@@ -87,9 +83,7 @@
 				$(this).attr('value', 2);	
 				$( "#result-reply" ).html( data );
 
-				// socket.emit('join', data, document.getElementById('#replyBtn').value);
-
-				socket.emit('message', sendMessageURL, $('#replyBtn').val());
+				socket.emit('message', $('#replyBtn').val(), sendMessageURL);
 			});
 		});
 	});
