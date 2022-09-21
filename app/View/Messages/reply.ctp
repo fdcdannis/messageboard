@@ -78,7 +78,6 @@
 				type: 'post',
 				data: { name: "John" }
 			}).done( function(data) {
-				// console.log(data);
 				$('#replyMessage').val('');
 				$(this).attr('value', 2);	
 				$( "#result-reply" ).html( data );
