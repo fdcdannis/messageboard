@@ -9,6 +9,14 @@ const io = require('socket.io')(server, {
     }
 });
 
+//  Web Socket for MessageList
+io.on('connection', (socket) => {
+   
+    socket.on('messagelist', (message) =>{
+        io.emit('new-message', message);
+    });
+});
+
 io.on('connection', (socket) => {
 
     socket.on('message', (roomID, message) =>{

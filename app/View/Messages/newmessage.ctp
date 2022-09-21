@@ -21,9 +21,37 @@
 			</div>
 
 			<!-- Send button -->
-			<div class="submit send">
-				<?php echo $this->Form->submit('Send', array('class' => 'form-submit',  'title' => 'Create New Message') ); ?>
+			
+
+			<div class="reply-message-btn">
+				<button id="replyBtn" type="button" value="">Reply</button>
 			</div>
 		</div>
 	<?php echo $this->Form->end(); ?>
 </div>
+
+<script type="text/javascript">
+	// Reply Messages Ajax
+	$(document).ready(function() {
+
+		$(document).on('click','#replyBtn',function(){
+
+		// 	// var message = $('#replyMessage').val();
+
+		// 	// var sendMessageURL = '<?php echo Router::url( array("controller" => "messages", "action" => "replymessages_socket" )); ?>/' + $(this).val() + "/" + message;
+		    var test = '<?php echo Router::url( array("controller" => "messages", "action" => "messagelist" )); ?>/';
+		console.log(test);
+			$.ajax({
+				url: test,
+				type: 'post',
+				data: { name: "test" }
+			}).done( function(data) {
+				// $('#replyMessage').val('');
+				// $(this).attr('value', 2);	
+				// $( "#result-reply" ).html( data );
+
+				// socket.emit('message', $('#replyBtn').val(), sendMessageURL);
+			});
+		});
+	});
+</script>

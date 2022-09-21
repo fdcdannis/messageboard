@@ -234,7 +234,18 @@ class MessagesController extends AppController {
 		$this->set(compact('messages'));
     }
 
-	public function newmessage() {
+	public function newmessage($id = null) {
+
+
+		$this->loadmodel('User');
+		$result = $this->User->find('list');
+
+		// pr($result);
+
+		$this->set(compact('result'));
+    }
+
+	public function newmessagelist() {
 		$user_id = $this->Auth->user('id');;
 		$currDateTime = date("Y-m-d H:i:s");
 
@@ -262,6 +273,7 @@ class MessagesController extends AppController {
 
 		$this->set(compact('result'));
     }
+	
 }
 
 ?>
