@@ -42,12 +42,12 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<div id="container">
 		<div id="header" class="menu">
 			<div class="logo">
-				<?php echo $this->Html->link( "Message Board",   array('controller' => 'messages', 'action'=>'messagelist') ); ?>
+				<?php echo $this->Html->link( "Message Board", array('controller' => 'messages', 'action'=>'messagelist') ); ?>
 			</div>
 			<div class="dashboard">
 				<?php
 					if($this->Session->check('Auth.User')){
-						echo $this->Html->link( "Messagelist",   array('controller' => 'messages', 'action'=>'messagelist') );
+						echo $this->Html->link( "Messagelist", array('controller' => 'messages', 'action'=>'messagelist') );
 					}
 				?>
 			</div>

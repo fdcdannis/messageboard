@@ -62,7 +62,7 @@ class UsersController extends AppController {
 
 		//if already logged-in, redirect
 		if($this->Session->check('Auth.User')){
-			$this->redirect(array('action' => 'index'));
+			$this->redirect(array('controller' => 'messages', 'action' => 'messagelist'));
 		}
 
 		if($this->request->is('post')) {
@@ -79,6 +79,11 @@ class UsersController extends AppController {
 	}
 
 	public function logout() {
+		//if already logged-in, redirect
+		// if($this->Session->check('Auth.User')){
+		// 	$this->redirect(array('controller' => 'messages', 'action' => 'messagelist'));
+		// }
+
 		$this->redirect($this->Auth->logout());
 	}
 
@@ -88,6 +93,10 @@ class UsersController extends AppController {
     }
 
     public function register() {
+		//if already logged-in, redirect
+		if($this->Session->check('Auth.User')){
+			$this->redirect(array('controller' => 'messages', 'action' => 'messagelist'));
+		}
         if ($this->request->is('post')) {
 			$this->User->create();
 			if ($this->User->save($this->request->data)) {

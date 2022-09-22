@@ -13,12 +13,16 @@ class MessagesController extends AppController {
     	'order' => array('User.name' => 'asc' )
     );
 
-    public function beforeFilter() {
-        parent::beforeFilter();
-        $this->Auth->allow('login','register', 'thankyou');
-    }
+    // public function beforeFilter() {
+    //     parent::beforeFilter();
+    //     $this->Auth->allow('login','register', 'thankyou');
+    // }
 
     public function messagelist() {
+
+		// if($this->Session->check('Auth.User')){
+		// 	$this->redirect(array('action' => 'messagelist'));
+		// }
 
         $user_id = AuthComponent::user('id');
 		

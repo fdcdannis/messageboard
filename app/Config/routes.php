@@ -27,7 +27,7 @@
  */
 
 	/** Users Controller */
-	Router::connect('/', array('controller' => 'users', 'action' => 'login')); /** Users Login */
+	
 	Router::connect('/login', array('controller' => 'users', 'action' => 'login')); /** Login User */
 	Router::connect('/logout', array('controller' => 'users', 'action' => 'logout')); /** Logout User */
 	Router::connect('/thankyou', array('controller' => 'users', 'action' => 'thankyou')); /** Thank you Page */
@@ -43,6 +43,7 @@
 
 	/** Messages Controller */
 	// Router::connect('/messagelist', array('controller' => 'users', 'action' => 'index'));
+	// Router::connect('/', array('controller' => 'messages', 'action' => 'messagelist')); /** Users Login */
 	Router::connect('/messagelist', array('controller' => 'messages', 'action' => 'messagelist')); /** Message list */
 	Router::connect('/newmessage', array('controller' => 'messages', 'action' => 'newmessage')); /** Message list */
 	// Router::connect('/messageboard/messages/deletemessage/:id', array('controller' => 'messages', 'action' => 'deletemessage')); /** Message list */
