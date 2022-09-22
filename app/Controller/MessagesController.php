@@ -19,9 +19,13 @@ class MessagesController extends AppController {
     }
 
     public function messagelist() {
-		// pr($id);
 
         $user_id = AuthComponent::user('id');
+		
+
+		$this->loadmodel('User');
+		$result = $this->User->find('list');
+
 		$messages = $this->Message->query("
 				SELECT  *
 				FROM    Users AS User
@@ -33,9 +37,10 @@ class MessagesController extends AppController {
 				JOIN    Messages AS Message
 				ON Message.message_to_userid = $user_id AND User.id = Message.message_from_user_id AND Message.reply_flag = 0
 				ORDER BY message_created desc
-				LIMIT 2
+				LIMIT 5
 		");
-		$this->set(compact('messages'));
+
+		$this->set(compact('result', 'messages'));
     }
 
 	public function loadmore($limit = null) {
@@ -78,7 +83,7 @@ class MessagesController extends AppController {
 				ON Message.message_to_userid = $user_id AND User.id = Message.message_from_user_id AND Message.reply_flag = 0				
 				WHERE Message.message_details LIKE '%$search%'
 				ORDER BY message_created desc
-				LIMIT 2
+				LIMIT 5
 		");
 
 		$this->set(compact('messages'));
@@ -102,7 +107,7 @@ class MessagesController extends AppController {
 				ON Message.message_to_userid = $user_id AND User.id = Message.message_from_user_id AND Message.reply_flag = 0
 				WHERE Message.message_details LIKE '%$search%'
 				ORDER BY message_created desc
-				LIMIT 2
+				LIMIT 5
 		");
 
 		$this->set(compact('messages'));
@@ -134,7 +139,7 @@ class MessagesController extends AppController {
 				JOIN    Users AS User
 				ON Message.message_to_userid = $user_id AND User.id = Message.message_from_user_id AND (Message.id = $id OR Message.reply_id = $id)
 				ORDER BY message_created desc
-				LIMIT 10			
+				LIMIT 5			
 		");
 
 		$this->set(compact('messages'));
@@ -207,7 +212,7 @@ class MessagesController extends AppController {
 				JOIN    Users AS User
 				ON Message.message_to_userid = $user_id AND User.id = Message.message_from_user_id AND (Message.id = $id OR Message.reply_id = $id)
 				ORDER BY message_created desc
-				LIMIT 10
+				LIMIT 5
 		");
 
 		$this->set(compact('messages'));
@@ -228,52 +233,63 @@ class MessagesController extends AppController {
 				JOIN    Users AS User
 				ON Message.message_to_userid = $user_id AND User.id = Message.message_from_user_id AND (Message.id = $id OR Message.reply_id = $id)
 				ORDER BY message_created desc
-				LIMIT 10
+				LIMIT 5
 		");
 
 		$this->set(compact('messages'));
     }
 
-	public function newmessage($id = null) {
-
-
-		$this->loadmodel('User');
-		$result = $this->User->find('list');
-
-		// pr($result);
-
-		$this->set(compact('result'));
-    }
-
-	public function newmessagelist() {
-		$user_id = $this->Auth->user('id');;
+	public function newmessages($selectedRecepientID = null, $newMessages = null) {
+		$user_id = AuthComponent::user('id');
 		$currDateTime = date("Y-m-d H:i:s");
 
-		if ($this->request->is('post')) {
-			$this->Message->create();
 
-			$this->request->data['Message']['message_from_user_id'] = $user_id;
-			$this->request->data['Message']['reply_flag'] = 0;
-			$this->request->data['Message']['message_id'] = $user_id;
-			$this->request->data['Message']['reply_id'] = 0;
-			$this->request->data['Message']['message_created'] = $currDateTime;
+		$this->request->data['Message']['message_details'] = $newMessages;
+		$this->request->data['Message']['message_from_user_id'] = $user_id;
+		$this->request->data['Message']['reply_flag'] = 0;
+		$this->request->data['Message']['message_id'] = $user_id;
+		$this->request->data['Message']['reply_id'] = 0;
+		$this->request->data['Message']['message_created'] = $currDateTime;
+		$this->request->data['Message']['message_to_userid'] = $selectedRecepientID;
 
-			if ($this->Message->save($this->request->data)) {
-				$this->redirect(array('action' => 'messagelist'));
-				// $this->Session->setFlash(__('The user has been created'));
-			} else {
-				// $this->Session->setFlash(__('The user could not be created. Please, try again.'));
-			}
-		}
+		$this->Message->save($this->request->data);
 
-		$this->loadmodel('User');
-		$result = $this->User->find('list');
+		$messages = $this->Message->query("
+				SELECT  *
+				FROM    Users AS User
+				JOIN    Messages AS Message
+				ON Message.message_from_user_id = $user_id AND User.id = Message.message_from_user_id AND Message.reply_flag = 0
+				UNION ALL
+				SELECT  *
+				FROM    Users AS User
+				JOIN    Messages AS Message
+				ON Message.message_to_userid = $user_id AND User.id = Message.message_from_user_id AND Message.reply_flag = 0
+				ORDER BY message_created desc
+				LIMIT 5
+		");
 
-		// pr($result);
-
-		$this->set(compact('result'));
+		$this->set(compact('messages'));
     }
-	
+
+	public function newmessages_socket() {
+		$user_id = AuthComponent::user('id');
+
+		$messages = $this->Message->query("
+				SELECT  *
+				FROM    Users AS User
+				JOIN    Messages AS Message
+				ON Message.message_from_user_id = $user_id AND User.id = Message.message_from_user_id AND Message.reply_flag = 0
+				UNION ALL
+				SELECT  *
+				FROM    Users AS User
+				JOIN    Messages AS Message
+				ON Message.message_to_userid = $user_id AND User.id = Message.message_from_user_id AND Message.reply_flag = 0
+				ORDER BY message_created desc
+				LIMIT 5
+		");
+
+		$this->set(compact('messages'));
+    }
 }
 
 ?>

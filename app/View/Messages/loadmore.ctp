@@ -32,7 +32,7 @@
 						<?php if($message['0']['message_from_user_id'] == AuthComponent::user('id')) { ?>
 							<!-- Message Picture -->
 							<div class="message-pic">
-								<?php echo $this->Html->image($message['0']['profile_pic'], array('height' => '200', 'width' => '200', 'fullBase' => true, 'plugin' => false)); ?>
+								<?php echo $this->Html->image($message['0']['profile_pic'], array('height' => '100', 'width' => '100', 'fullBase' => true, 'plugin' => false)); ?>
 							</div>
 						<?php } ?>
 
@@ -49,7 +49,7 @@
 						<?php if($message['0']['message_from_user_id'] != AuthComponent::user('id')) { ?>
 							<!-- Message Picture -->
 							<div class="message-pic">
-								<?php echo $this->Html->image($message['0']['profile_pic'], array('height' => '200', 'width' => '200', 'fullBase' => true, 'plugin' => false)); ?>
+								<?php echo $this->Html->image($message['0']['profile_pic'], array('height' => '100', 'width' => '100', 'fullBase' => true, 'plugin' => false)); ?>
 							</div>
 						<?php } ?>
 				</div>

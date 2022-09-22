@@ -1,14 +1,47 @@
 
 <div class="container-messagelist">
+
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<div class="container-newmessage">
+				<?php echo $this->Form->create('Message');?>
+					<!-- Message Details -->
+					<div class="new-message-details">
+
+						<!-- Recipent -->
+						<div class="recipient">
+							<span class="">Recipient</span>
+
+							<?php 
+								echo $this->Form->input('message_to_userid', array('type'=>'select', 'id'=>'selectedRecepientID', 'options'=>$result, 'default'=>'3'));
+							?>
+						</div>
+
+						<!-- New-Message -->
+						<div class="new-messages">
+							<span class="">Subject</span>
+							<textarea name="message_details" id="newMessage" value="" placeholder="Type a new message"></textarea>
+						</div>
+
+						<!-- Send button -->
+						
+
+						<div class="reply-message-btn">
+							<button id="replyBtn" type="button" value="">Send</button>
+						</div>
+					</div>
+				<?php echo $this->Form->end(); ?>
+			</div>
+		</div>
+	</div>
+
 	<!-- New Message Button -->
-	<div class="new-message">
-		<?php
-			echo $this->Html->link(
-					$this->Html->tag('div', "New Message", array('class' => '')),
-					array('controller' => 'messages', 'action' => 'newmessage'),
-					array('escape' => false)
-			);
-		?>
+	<div class="new-message-btn">
+		<button type="button" id="myBtn" class="" value="">New Message</button>
 	</div>
 
 	<div class="search-message">
@@ -49,7 +82,7 @@
 						<?php if($message['0']['message_from_user_id'] == AuthComponent::user('id')) { ?>
 							<!-- Message Picture -->
 							<div class="message-pic">
-								<?php echo $this->Html->image($message['0']['profile_pic'], array('height' => '200', 'width' => '200', 'fullBase' => true, 'plugin' => false)); ?>
+								<?php echo $this->Html->image($message['0']['profile_pic'], array('height' => '100', 'width' => '100', 'fullBase' => true, 'plugin' => false)); ?>
 							</div>
 						<?php } ?>
 
@@ -66,7 +99,7 @@
 						<?php if($message['0']['message_from_user_id'] != AuthComponent::user('id')) { ?>
 							<!-- Message Picture -->
 							<div class="message-pic">
-								<?php echo $this->Html->image($message['0']['profile_pic'], array('height' => '200', 'width' => '200', 'fullBase' => true, 'plugin' => false)); ?>
+								<?php echo $this->Html->image($message['0']['profile_pic'], array('height' => '100', 'width' => '100', 'fullBase' => true, 'plugin' => false)); ?>
 							</div>
 						<?php } ?>
 				</div>
@@ -82,6 +115,26 @@
 </div>
 
 <script type="text/javascript">
+
+	// New Messages Ajax
+	$(document).ready(function() {
+		$(document).on('click','#replyBtn',function(){
+			var modal = document.getElementById("myModal");
+			var selectedRecepientID = $('#selectedRecepientID').find(":selected").val();
+			var newMessage = $('#newMessage').val();
+			var ajaxURL = '<?php echo Router::url( array("controller" => "messages", "action" => "newmessages" )); ?>/' + selectedRecepientID + "/" + newMessage;
+			var sendMessageURLToSocket = '<?php echo Router::url( array("controller" => "messages", "action" => "newmessages_socket" )); ?>';
+			$.ajax({
+				url: ajaxURL,
+				type: 'post',
+				data: { name: "test" }
+			}).done( function(data) {
+				modal.style.display = "none";
+				$( "#result" ).html( data );
+				socket.emit('messagelist', sendMessageURLToSocket);
+			});
+		});
+	});
 
 	// Delete Messages AJAX
 	$(document).ready(function() {
@@ -119,7 +172,7 @@
 	$(document).ready(function() {
 		$(document).on('click','.load-more-btn > button',function(){
 
-			var loadmore_limit = 2 + Number($(this).val());
+			var loadmore_limit = 5 + Number($(this).val());
 
 			$(this).attr('value', loadmore_limit); //versions older than 1.6
 
@@ -138,4 +191,33 @@
 		});
 	});
 
+</script>
+
+<script type="text/javascript">
+
+	// Get the modal
+	var modal = document.getElementById("myModal");
+
+	// Get the button that opens the modal
+	var btn = document.getElementById("myBtn");
+
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
+
+	// When the user clicks the button, open the modal 
+	btn.onclick = function() {
+	modal.style.display = "block";
+	}
+
+	// When the user clicks on <span> (x), close the modal
+	span.onclick = function() {
+	modal.style.display = "none";
+	}
+
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	}
 </script>

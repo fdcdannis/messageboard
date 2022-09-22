@@ -29,6 +29,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->Html->meta('icon');
 
 		echo $this->Html->css('cake.generic');
+		echo $this->Html->css('cake.modal');
+		echo $this->Html->script('cake.modal');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -75,6 +77,21 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<script src="http://localhost:5000/socket.io/socket.io.js"></script>
 	<script>
 		var socket = io.connect('http://localhost:5000');	
+
+		socket.on('new-message', (msg) => {
+			console.log(msg);
+			$(document).ready(function() {
+				$.ajax({
+					url: msg,
+					type: 'post',
+					data: { name: "test" }
+				}).done( function(data) {
+					$('#replyMessage').val('');
+					$(this).attr('value', 2);	
+					$( "#result" ).html( data );
+				});
+			});
+		});
 
 		socket.on('receive-message', (msg) => {
 			$(document).ready(function() {

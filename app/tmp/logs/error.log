@@ -11234,3 +11234,361 @@ Stack Trace:
 #9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
 #10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #11 {main}
+2022-09-22 03:00:40 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/newmessage//undefined
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-22 03:13:24 Error: [ParseError] syntax error, unexpected '$messages' (T_VARIABLE), expecting ')'
+Request URL: /messageboard/messagelist
+Stack Trace:
+#0 [internal function]: App::load('MessagesControl...')
+#1 [internal function]: spl_autoload_call('MessagesControl...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(266): class_exists('MessagesControl...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2022-09-22 03:14:09 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'message_details' doesn't have a default value
+Request URL: /messageboard/newmessage/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('INSERT INTO `me...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(1132): DboSource->execute('INSERT INTO `me...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Message), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(253): Model->save(Array)
+#6 [internal function]: MessagesController->newmessage()
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-22 03:21:15 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'message_details' doesn't have a default value
+Request URL: /messageboard/newmessage/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('INSERT INTO `me...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(1132): DboSource->execute('INSERT INTO `me...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Message), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(253): Model->save(Array)
+#6 [internal function]: MessagesController->newmessage()
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-22 03:27:22 Error: [MissingControllerException] Controller class NewmessageController could not be found.
+Exception Attributes: array (
+  'class' => 'NewmessageController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/newmessage/test
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-22 03:28:35 Error: [MissingControllerException] Controller class NewmessageController could not be found.
+Exception Attributes: array (
+  'class' => 'NewmessageController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/newmessage/2
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-22 03:31:06 Error: [MissingControllerException] Controller class NewmessageController could not be found.
+Exception Attributes: array (
+  'class' => 'NewmessageController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/newmessage/2
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-22 03:31:12 Error: [MissingControllerException] Controller class NewmessageController could not be found.
+Exception Attributes: array (
+  'class' => 'NewmessageController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/newmessage/2
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-22 03:31:15 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'message_to_userid' doesn't have a default value
+Request URL: /messageboard/newmessage/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('INSERT INTO `me...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(1132): DboSource->execute('INSERT INTO `me...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Message), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(254): Model->save(Array)
+#6 [internal function]: MessagesController->newmessage()
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-22 03:31:53 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'message_details' cannot be null
+Request URL: /messageboard/newmessage/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('INSERT INTO `me...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(1132): DboSource->execute('INSERT INTO `me...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Message), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(260): Model->save(Array)
+#6 [internal function]: MessagesController->newmessage()
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-22 03:31:54 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'message_details' cannot be null
+Request URL: /messageboard/newmessage/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('INSERT INTO `me...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(1132): DboSource->execute('INSERT INTO `me...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Message), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(260): Model->save(Array)
+#6 [internal function]: MessagesController->newmessage()
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-22 03:32:17 Error: [MissingControllerException] Controller class NewmessageController could not be found.
+Exception Attributes: array (
+  'class' => 'NewmessageController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/newmessage/2
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-22 03:33:12 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'message_to_userid' cannot be null
+Request URL: /messageboard/messages/newmessage/2
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('INSERT INTO `me...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(1132): DboSource->execute('INSERT INTO `me...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Message), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(260): Model->save(Array)
+#6 [internal function]: MessagesController->newmessage('2')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-22 03:38:07 Error: [MissingControllerException] Controller class NewmessageController could not be found.
+Exception Attributes: array (
+  'class' => 'NewmessageController',
+  'plugin' => NULL,
+)
+Request URL: /messageboard/newmessage/3
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2022-09-22 03:45:45 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'message_details' cannot be null
+Request URL: /messageboard/messages/replymessages/345
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('INSERT INTO `me...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(1132): DboSource->execute('INSERT INTO `me...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Message), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(202): Model->save(Array)
+#6 [internal function]: MessagesController->replymessages('345')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-22 03:46:00 Error: [PDOException] SQLSTATE[22007]: Invalid datetime format: 1366 Incorrect integer value: 'sdfgdsfg' for column `messageboard`.`messages`.`reply_id` at row 1
+Request URL: /messageboard/messages/replymessages/sdfgdsfg
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('INSERT INTO `me...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(1132): DboSource->execute('INSERT INTO `me...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Message), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(202): Model->save(Array)
+#6 [internal function]: MessagesController->replymessages('sdfgdsfg')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-22 03:51:56 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'message_to_userid' cannot be null
+Request URL: /messageboard/messages/newmessages/234
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('INSERT INTO `me...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(1132): DboSource->execute('INSERT INTO `me...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Message), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(260): Model->save(Array)
+#6 [internal function]: MessagesController->newmessages('234')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-22 04:34:29 Error: [MissingHelperException] Helper class UrlHelper could not be found.
+Exception Attributes: array (
+  'class' => 'UrlHelper',
+  'plugin' => false,
+)
+Request URL: /messageboard/messagelist
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Url')
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/View/View.php(858): HelperCollection->__isset('Url')
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/View/Layouts/default.ctp(39): View->__get('Url')
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/View/View.php(971): include('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/View/View.php(933): View->_evaluate('/Applications/X...', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/View/View.php(546): View->_render('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/View/View.php(481): View->renderLayout('\n<div class="co...', 'default')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(968): View->render(NULL, 'default')
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-22 04:35:52 Error: [MissingHelperException] Helper class UrlHelper could not be found.
+Exception Attributes: array (
+  'class' => 'UrlHelper',
+  'plugin' => false,
+)
+Request URL: /messageboard/messagelist
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Url')
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/View/View.php(858): HelperCollection->__isset('Url')
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/View/Layouts/default.ctp(39): View->__get('Url')
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/View/View.php(971): include('/Applications/X...')
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/View/View.php(933): View->_evaluate('/Applications/X...', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/View/View.php(546): View->_render('/Applications/X...')
+#6 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/View/View.php(481): View->renderLayout('\n<div class="co...', 'default')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(968): View->render(NULL, 'default')
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-22 04:43:13 Error: [MissingActionException] Action MessagesController::newmessage() could not be found.
+Exception Attributes: array (
+  'controller' => 'MessagesController',
+  'action' => 'newmessage',
+)
+Request URL: /messageboard/messages/newmessage/2
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2022-09-22 04:49:48 Error: [MissingActionException] Action MessagesController::newmessage() could not be found.
+Exception Attributes: array (
+  'controller' => 'MessagesController',
+  'action' => 'newmessage',
+)
+Request URL: /messageboard/newmessage
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2022-09-22 05:25:07 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'created_ip' doesn't have a default value
+Request URL: /messageboard/register
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('INSERT INTO `me...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(1132): DboSource->execute('INSERT INTO `me...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1942): DboSource->create(Object(User), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/UsersController.php(93): Model->save(Array)
+#6 [internal function]: UsersController->register()
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-22 05:26:39 Error: [PDOException] SQLSTATE[HY000]: General error: 1364 Field 'modified_ip' doesn't have a default value
+Request URL: /messageboard/register
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('INSERT INTO `me...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(1132): DboSource->execute('INSERT INTO `me...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1942): DboSource->create(Object(User), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/UsersController.php(93): Model->save(Array)
+#6 [internal function]: UsersController->register()
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-22 05:41:48 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'message_details' cannot be null
+Request URL: /messageboard/messages/replymessages/4/36/40/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('INSERT INTO `me...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(1132): DboSource->execute('INSERT INTO `me...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Message), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(202): Model->save(Array)
+#6 [internal function]: MessagesController->replymessages('4', '36', '40')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-22 05:41:50 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'message_details' cannot be null
+Request URL: /messageboard/messages/replymessages/4/36/40/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('INSERT INTO `me...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(1132): DboSource->execute('INSERT INTO `me...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Message), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(202): Model->save(Array)
+#6 [internal function]: MessagesController->replymessages('4', '36', '40')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-22 05:41:52 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'message_details' cannot be null
+Request URL: /messageboard/messages/replymessages/4/36/40/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('INSERT INTO `me...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(1132): DboSource->execute('INSERT INTO `me...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Message), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(202): Model->save(Array)
+#6 [internal function]: MessagesController->replymessages('4', '36', '40')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2022-09-22 05:42:00 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'message_details' cannot be null
+Request URL: /messageboard/messages/replymessages/4/36/40/
+Stack Trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(502): PDOStatement->execute(Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(468): DboSource->_execute('INSERT INTO `me...', Array)
+#2 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Datasource/DboSource.php(1132): DboSource->execute('INSERT INTO `me...')
+#3 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1942): DboSource->create(Object(Message), Array, Array)
+#4 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Model/Model.php(1760): Model->_doSave(Array, Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/Controller/MessagesController.php(202): Model->save(Array)
+#6 [internal function]: MessagesController->replymessages('4', '36', '40')
+#7 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Controller/Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/XAMPP/xamppfiles/htdocs/messageboard/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 /Applications/XAMPP/xamppfiles/htdocs/messageboard/app/webroot/index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}

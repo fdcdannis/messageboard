@@ -1011,14 +1011,14 @@ a {
 	margin-bottom: 10px;
 }
 .message-pic {
-	width: 28%;
+	width: 14%;
     border: 1px solid #d4d4d4;
     border-radius: 5px;
     padding: 5px;
 	margin-right: 15px;
 }
 .message-details {
-    width: 72%;
+    width: 82%;
 	position: relative;
 	border: 1px solid #d4d1d1;
 }
@@ -1090,7 +1090,7 @@ a {
     height: 300px;
 }
 .message-user span {
-    font-size: 25px;
+    font-size: 15px;
     font-style: italic;
 	font-weight: 400 !important;
 }
@@ -1105,8 +1105,18 @@ a {
     text-align: center;
     margin-top: 30px;
 }
+.new-message-btn > button,
 .load-more-btn > button {
     padding: 10px 63px;
+	cursor: pointer;
+}
+.new-message-btn {
+    text-align: right;
+    width: 103%;
+}
+.new-message-btn > button {
+    background: #3e3635;
+	color: #fff;
 }
 .delete-btn {
 	border: 1px solid #dddcdc;

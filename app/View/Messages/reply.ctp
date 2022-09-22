@@ -29,7 +29,7 @@
 				<?php if($message['0']['message_from_user_id'] == AuthComponent::user('id')) { ?>
 					<!-- Message Picture -->
 					<div class="message-pic">
-						<?php echo $this->Html->image($message['0']['profile_pic'], array('height' => '200', 'width' => '200', 'fullBase' => true, 'plugin' => false)); ?>
+						<?php echo $this->Html->image($message['0']['profile_pic'], array('height' => '100', 'width' => '100', 'fullBase' => true, 'plugin' => false)); ?>
 					</div>
 				<?php } ?>
 
@@ -46,7 +46,7 @@
 				<?php if($message['0']['message_from_user_id'] != AuthComponent::user('id')) { ?>
 					<!-- Message Picture -->
 					<div class="message-pic">
-						<?php echo $this->Html->image($message['0']['profile_pic'], array('height' => '200', 'width' => '200', 'fullBase' => true, 'plugin' => false)); ?>
+						<?php echo $this->Html->image($message['0']['profile_pic'], array('height' => '100', 'width' => '100', 'fullBase' => true, 'plugin' => false)); ?>
 					</div>
 				<?php } ?>
 		</div>
@@ -72,9 +72,11 @@
 			var message = $('#replyMessage').val();
 
 			var sendMessageURL = '<?php echo Router::url( array("controller" => "messages", "action" => "replymessages_socket" )); ?>/' + $(this).val() + "/" + message;
-			
+
+			var ajaxURL = "<?php echo Router::url( array("controller" => "messages", "action" => "replymessages" )); ?>/" + $(this).val() + "/" + message;
+			console.log(ajaxURL);
 			$.ajax({
-				url: "<?php echo Router::url( array("controller" => "messages", "action" => "replymessages" )); ?>/" + $(this).val() + "/" + message,
+				url: ajaxURL,
 				type: 'post',
 				data: { name: "John" }
 			}).done( function(data) {
@@ -92,7 +94,7 @@
 		$(document).on('click','.load-more-btn > button',function(){
 
 			var reply_id = $('#replyBtn').val();
-			var loadmore_limit = 2 + Number($(this).val());
+			var loadmore_limit = 5 + Number($(this).val());
 
 			$(this).attr('value', loadmore_limit); //versions older than 1.6
 			console.log(loadmore_limit);
