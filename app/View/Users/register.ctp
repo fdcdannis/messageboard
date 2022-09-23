@@ -1,5 +1,5 @@
 <!-- app/View/Users/add.ctp -->
-<div class="users-form">
+<div class="users-form register">
 	<?php echo $this->Form->create('User');?>
 		<fieldset>
 			<legend><?php echo __('Register'); ?></legend>

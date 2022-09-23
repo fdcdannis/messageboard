@@ -4,18 +4,29 @@ class UsersController extends AppController {
 
     public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('login','register', 'thankyou');
+        $this->Auth->allow('login','register');
+
+		date_default_timezone_set('Asia/Manila');
     }
 
 	public function thankyou() {
 		//if already logged-in, redirect
-		if($this->Session->check('Auth.User')){
-			$this->redirect(array('action' => 'index'));
-		}
+		// if($this->Session->check('Auth.User')){
+		// 	$this->redirect(array('controller' => 'users', 'action' => 'index'));
+		// }
 	}
 
 	public function myprofile($id = null) {
-		$user = $this->User->findById(AuthComponent::user('id'));
+		$user = $this->User->findById(AuthComponent::user('id'));		
+		// pr($user['User']);
+
+		if(!$user['User']['birthday'] == null){
+			$user['User']['birthday'] = date('F j\, Y', strtotime($user['User']['birthday']));
+		}
+
+		$user['User']['created'] = date('F j\, Y ha', strtotime($user['User']['created']));
+		$user['User']['last_login'] = date('F j\, Y ha', strtotime($user['User']['last_login']));
+
 		$this->set(compact('user'));
 	}
 
@@ -59,18 +70,19 @@ class UsersController extends AppController {
 	}
 
 	public function login() {
-
 		//if already logged-in, redirect
 		if($this->Session->check('Auth.User')){
 			$this->redirect(array('controller' => 'messages', 'action' => 'messagelist'));
 		}
 
 		if($this->request->is('post')) {
-			
-			$id = AuthComponent::user('id');
-			// $this->Auth->authenticate['Form'] = array('fields' => array('username' => 'email'));
-
+			// pr($this->request);
 			if($this->Auth->login()) {
+				$id = AuthComponent::user('id');
+				$this->request->data['User']['id'] = $id;
+				$this->request->data['User']['last_login'] = date("Y-m-d H:i:s");
+				$this->User->save($this->request->data);
+				
 				$this->redirect($this->Auth->redirect());
 			} else {
 				$this->Session->setFlash(__('Invalid email or password, try again'));
@@ -79,10 +91,6 @@ class UsersController extends AppController {
 	}
 
 	public function logout() {
-		//if already logged-in, redirect
-		// if($this->Session->check('Auth.User')){
-		// 	$this->redirect(array('controller' => 'messages', 'action' => 'messagelist'));
-		// }
 
 		$this->redirect($this->Auth->logout());
 	}
@@ -99,9 +107,14 @@ class UsersController extends AppController {
 		}
         if ($this->request->is('post')) {
 			$this->User->create();
+
+			$this->request->data['User']['last_login'] = date("Y-m-d H:i:s");
+			$this->request->data['User']['profile_pic']  = 'avatar-no-pic.png';
+
 			if ($this->User->save($this->request->data)) {
-				// $this->Session->setFlash(__('The user has been created'));
-				$this->redirect(array('action' => 'thankyou'));
+				if($this->Auth->login()) { 
+					$this->redirect(array('controller' => 'users', 'action' => 'thankyou'));
+				}
 			} else {
 				$this->Session->setFlash(__('The user could not be created. Please, try again.'));
 			}
@@ -116,6 +129,10 @@ class UsersController extends AppController {
 		}
 
 		$user = $this->User->findById($id);
+
+		$birthday = date('m/d/Y', strtotime($user['User']['birthday']));
+		$this->set(compact('birthday'));
+
 		if (!$user) {
 			$this->Session->setFlash('Invalid User ID Provided');
 			$this->redirect(array('action'=>'index'));
@@ -134,9 +151,13 @@ class UsersController extends AppController {
 			$target = WWW_ROOT.'img'.DS;
         	$target = $target.basename($image);
 
-			move_uploaded_file($tmp, $target);
+			if(move_uploaded_file($tmp, $target)) {
+				$this->request->data['User']['profile_pic'] = $image;
+			}
 
-			$this->request->data['User']['profile_pic'] = $image;
+			$birthday = date("y-m-d", strtotime($frmData['birthday']));
+
+			$this->request->data['User']['birthday'] = $birthday;
 
 			if ($this->User->save($this->request->data)) {
 				$this->Session->setFlash(__('The user has been updated'));

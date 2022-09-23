@@ -20,13 +20,24 @@
 		<!-- Details -->
 		<div class="details">
 			<div class="full-name">
-				<?php echo $user['User']['lastname'].', '.$user['User']['firstname'].' '.$user['User']['age']; ?>
+				<?php if($user['User']['lastname'] !== null) { ?>
+					<?php echo $user['User']['lastname'].', '.$user['User']['firstname'].' '.$user['User']['age']; ?>
+				<?php } else { ?>
+					<p class="">Name: </p>
+				<?php } ?>
 			</div>
+
 			<div class="user-info">
-				<p class=""><span class=""> Gender: </span><?php echo $user['User']['gender'] ?></p>
+				<p class="">
+					<?php if( $user['User']['gender'] == '0') { ?>
+						<span class=""> Gender: </span> Male
+					<?php } else { ?>
+						<span class=""> Gender: </span> Female
+					<?php } ?>
+				</p>
 				<p class=""><span class=""> Birthday: </span><?php echo $user['User']['birthday'] ?></p>
 				<p class=""><span class=""> Joined: </span><?php echo $user['User']['created'] ?></p>
-				<p class=""><span class=""> Last Login: </span><?php echo $user['User']['modified'] ?></p>
+				<p class=""><span class=""> Last Login: </span><?php echo $user['User']['last_login'] ?></p>
 			</div>
 		</div>
 	</div>

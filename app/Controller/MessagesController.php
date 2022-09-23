@@ -2,33 +2,38 @@
 
 class MessagesController extends AppController {
 
+	public function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allow('login','register', 'thankyou');
+
+		date_default_timezone_set('Asia/Manila');
+    }
+
 
 	public $components = array(
         'RequestHandler'
     );
 
-	public $paginate = array(
-        'limit' => 25,
-        'conditions' => array('status' => '1'),
-    	'order' => array('User.name' => 'asc' )
-    );
-
-    // public function beforeFilter() {
-    //     parent::beforeFilter();
-    //     $this->Auth->allow('login','register', 'thankyou');
-    // }
 
     public function messagelist() {
-
-		// if($this->Session->check('Auth.User')){
-		// 	$this->redirect(array('action' => 'messagelist'));
-		// }
 
         $user_id = AuthComponent::user('id');
 		
 
 		$this->loadmodel('User');
-		$result = $this->User->find('list');
+		// $result = $this->User->findByID($user_id);
+
+		// $result = $this->User->Id(AuthComponent::user('id'));	
+
+		$result = $this->User->find('all', array(
+			// 'conditions' => array('Article.status' => 'pending')
+		));
+
+		foreach ($result as &$results) {
+			pr($results['User']);
+		}
+
+		
 
 		$messages = $this->Message->query("
 				SELECT  *

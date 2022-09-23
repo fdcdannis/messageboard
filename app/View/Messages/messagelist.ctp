@@ -17,7 +17,7 @@
 							<span class="">Recipient</span>
 
 							<?php 
-								echo $this->Form->input('message_to_userid', array('type'=>'select', 'id'=>'selectedRecepientID', 'options'=>$result, 'default'=>'3'));
+								echo $this->Form->input('message_to_userid', array('type'=>'select', 'id'=>'selectedRecepientID', 'options'=>$result, 'default'=>'1'));
 							?>
 						</div>
 
@@ -92,7 +92,7 @@
 								<p class=""><span class=""><?php echo $message['0']['message_details'] ?></p>
 							</div>
 							<div class="message-date">
-								<p class=""><span class=""> <?php echo $message['0']['message_created'] ?></p>
+								<p class=""><span class=""> <?php echo date('F j\, Y h:i:s A', strtotime($message['0']['message_created'])) ?></p>
 							</div>
 						</div>
 
@@ -220,4 +220,11 @@
 			modal.style.display = "none";
 		}
 	}
+</script>
+
+<script type="text/javascript">
+	$("#selectedRecepientID").select2({
+		placeholder: "Select a programming language",
+		allowClear: true
+	});
 </script>

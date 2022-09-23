@@ -39,7 +39,7 @@
 						<p class=""><span class=""><?php echo $message['0']['message_details'] ?></p>
 					</div>
 					<div class="message-date">
-						<p class=""><span class=""> <?php echo $message['0']['message_created'] ?></p>
+						<p class=""><span class=""> <?php echo date('F j\, Y h:i:s A', strtotime($message['0']['message_created'])) ?></p>
 					</div>
 				</div>
 
