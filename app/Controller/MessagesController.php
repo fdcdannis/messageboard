@@ -7,33 +7,30 @@ class MessagesController extends AppController {
         $this->Auth->allow('login','register', 'thankyou');
 
 		date_default_timezone_set('Asia/Manila');
+		$this->loadmodel('User');
     }
 
 
 	public $components = array(
         'RequestHandler'
+
     );
 
 
     public function messagelist() {
 
         $user_id = AuthComponent::user('id');
-		
 
-		$this->loadmodel('User');
-		// $result = $this->User->findByID($user_id);
-
-		// $result = $this->User->Id(AuthComponent::user('id'));	
-
-		$result = $this->User->find('all', array(
-			// 'conditions' => array('Article.status' => 'pending')
+		$selectDatas = $this->User->find('all', array(
+			'fields' => array('User.profile_pic', 'User.firstname', 'User.lastname'),
+			'conditions' => array('User.id !=' => $user_id)
 		));
 
-		foreach ($result as &$results) {
-			pr($results['User']);
+		foreach($selectDatas as $key => $selectData) {
+			$selectData['User']['fullname'] = $selectData['User']['firstname'].' '.$selectData['User']['lastname'];
+			$resultData[] = [$selectData['User']['profile_pic'] => $selectData['User']['fullname']];
 		}
-
-		
+		$result = call_user_func_array('array_merge', $resultData);
 
 		$messages = $this->Message->query("
 				SELECT  *
@@ -49,11 +46,12 @@ class MessagesController extends AppController {
 				LIMIT 5
 		");
 
+
 		$this->set(compact('result', 'messages'));
     }
 
 	public function loadmore($limit = null) {
-		
+
         $user_id = AuthComponent::user('id');
 		$messages = $this->Message->query("
 				SELECT  *
@@ -89,7 +87,7 @@ class MessagesController extends AppController {
 				SELECT  *
 				FROM    Users AS User
 				JOIN    Messages AS Message
-				ON Message.message_to_userid = $user_id AND User.id = Message.message_from_user_id AND Message.reply_flag = 0				
+				ON Message.message_to_userid = $user_id AND User.id = Message.message_from_user_id AND Message.reply_flag = 0
 				WHERE Message.message_details LIKE '%$search%'
 				ORDER BY message_created desc
 				LIMIT 5
@@ -148,7 +146,7 @@ class MessagesController extends AppController {
 				JOIN    Users AS User
 				ON Message.message_to_userid = $user_id AND User.id = Message.message_from_user_id AND (Message.id = $id OR Message.reply_id = $id)
 				ORDER BY message_created desc
-				LIMIT 5			
+				LIMIT 5
 		");
 
 		$this->set(compact('messages'));
@@ -179,7 +177,7 @@ class MessagesController extends AppController {
 				JOIN    Users AS User
 				ON Message.message_to_userid = $user_id AND User.id = Message.message_from_user_id AND (Message.id = $id OR Message.reply_id = $id)
 				ORDER BY message_created desc
-				LIMIT $limit			
+				LIMIT $limit
 		");
 
 		$this->set(compact('messages'));
@@ -252,6 +250,10 @@ class MessagesController extends AppController {
 		$user_id = AuthComponent::user('id');
 		$currDateTime = date("Y-m-d H:i:s");
 
+		$getRecepientID = $this->User->find('all', array(
+			'fields' => array('User.id'),
+			'conditions' => array('User.profile_pic' => $selectedRecepientID)
+		));
 
 		$this->request->data['Message']['message_details'] = $newMessages;
 		$this->request->data['Message']['message_from_user_id'] = $user_id;
@@ -259,7 +261,7 @@ class MessagesController extends AppController {
 		$this->request->data['Message']['message_id'] = $user_id;
 		$this->request->data['Message']['reply_id'] = 0;
 		$this->request->data['Message']['message_created'] = $currDateTime;
-		$this->request->data['Message']['message_to_userid'] = $selectedRecepientID;
+		$this->request->data['Message']['message_to_userid'] = $getRecepientID['0']['User']['id'];
 
 		$this->Message->save($this->request->data);
 

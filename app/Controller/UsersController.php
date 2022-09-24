@@ -17,7 +17,7 @@ class UsersController extends AppController {
 	}
 
 	public function myprofile($id = null) {
-		$user = $this->User->findById(AuthComponent::user('id'));		
+		$user = $this->User->findById(AuthComponent::user('id'));
 		// pr($user['User']);
 
 		if(!$user['User']['birthday'] == null){
@@ -82,7 +82,7 @@ class UsersController extends AppController {
 				$this->request->data['User']['id'] = $id;
 				$this->request->data['User']['last_login'] = date("Y-m-d H:i:s");
 				$this->User->save($this->request->data);
-				
+
 				$this->redirect($this->Auth->redirect());
 			} else {
 				$this->Session->setFlash(__('Invalid email or password, try again'));
@@ -112,7 +112,7 @@ class UsersController extends AppController {
 			$this->request->data['User']['profile_pic']  = 'avatar-no-pic.png';
 
 			if ($this->User->save($this->request->data)) {
-				if($this->Auth->login()) { 
+				if($this->Auth->login()) {
 					$this->redirect(array('controller' => 'users', 'action' => 'thankyou'));
 				}
 			} else {

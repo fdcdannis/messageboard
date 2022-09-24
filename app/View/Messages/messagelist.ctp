@@ -16,7 +16,7 @@
 						<div class="recipient">
 							<span class="">Recipient</span>
 
-							<?php 
+							<?php
 								echo $this->Form->input('message_to_userid', array('type'=>'select', 'id'=>'selectedRecepientID', 'options'=>$result, 'default'=>'1'));
 							?>
 						</div>
@@ -28,7 +28,7 @@
 						</div>
 
 						<!-- Send button -->
-						
+
 
 						<div class="reply-message-btn">
 							<button id="replyBtn" type="button" value="">Send</button>
@@ -48,7 +48,7 @@
 		<p class="">Search Message:</p>
 		<input type="" class="" id="message-search"></input>
 	</div>
-		
+
 	<div id="result" class="">
 	<?php foreach($messages as $message): ?>
 
@@ -59,7 +59,7 @@
 				<div class="">
 					<?php if($message['0']['message_from_user_id'] == AuthComponent::user('id')) { ?>
 						<a href="/messageboard/userprofile/<?php echo AuthComponent::user('id') ?>">
-							<p class=""><?php echo $message['0']['firstname'] ?> <?php echo $message['0']['lastname'] ?></p>
+							<p class=""><?php echo $message['0']['firstname'] ?> <?php echo $message['0']['lastname'] ?> <?php echo $selectedRecepientID ?></p>
 						</a>
 					<?php } else { ?>
 						<a href="/messageboard/userprofile/<?php echo $message['0']['message_from_user_id'] ?>">
@@ -130,6 +130,7 @@
 				data: { name: "test" }
 			}).done( function(data) {
 				modal.style.display = "none";
+				$('#newMessage').val('');
 				$( "#result" ).html( data );
 				socket.emit('messagelist', sendMessageURLToSocket);
 			});
@@ -180,7 +181,7 @@
 
 			// console.log("<?php echo Router::url( array("controller" => "messages", "action" => "loadmore" )); ?>/" + loadmore_limit);
 
-			$.ajax({				
+			$.ajax({
 				url: "<?php echo Router::url( array("controller" => "messages", "action" => "loadmore" )); ?>/" + loadmore_limit,
 				type: 'post',
 				data: { name: "John" }
@@ -204,7 +205,7 @@
 	// Get the <span> element that closes the modal
 	var span = document.getElementsByClassName("close")[0];
 
-	// When the user clicks the button, open the modal 
+	// When the user clicks the button, open the modal
 	btn.onclick = function() {
 	modal.style.display = "block";
 	}
@@ -224,7 +225,17 @@
 
 <script type="text/javascript">
 	$("#selectedRecepientID").select2({
-		placeholder: "Select a programming language",
-		allowClear: true
+		placeholder: "Select a recepient",
+		allowClear: true,
+		templateResult: function (idioma1) {
+			console.log(idioma1);
+			var $span = $("<span><img src='/messageboard/app/webroot/img/" + idioma1.id + "' class='recipient-img'> <span class='recipient-text'>" + idioma1.text + "</span></span>");
+			return $span;
+		},
+		templateSelection: function (idioma1) {
+			console.log(idioma1);
+			var $span = $("<span><img src='/messageboard/app/webroot/img/" + idioma1.id + "' class='recipient-img'> <span class='recipient-text'>" + idioma1.text + "</span></span>");
+			return $span;
+		},
 	});
 </script>

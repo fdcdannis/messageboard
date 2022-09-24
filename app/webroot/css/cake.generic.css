@@ -1188,6 +1188,28 @@ img {
     max-width: 100%;
     height: auto;
 }
+.recipient-img {
+    width: 30px;
+    height: 30px;
+}
+.recipient-text {
+    position: relative;
+    bottom: 10px;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered > span:nth-child(2) {
+    position: relative;
+    top: 5px;
+}
+.select2-container--default .select2-selection--single {
+    height: 40px !important;
+}
+.select2-selection__clear {
+    position: relative;
+    top: 5px;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 6px !important;
+}
 .p-image {
   position: absolute;
   top: 167px;
