@@ -37,13 +37,16 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->fetch('script');
 	?>
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Ajax Jquery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+	<!-- Select To -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
+	<!-- Date Picker -->
+	<link href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 </head>
 <body>
 	<div id="container">
@@ -83,7 +86,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	</div>
 	<script src="http://localhost:3000/socket.io/socket.io.js"></script>
 	<script>
-		var socket = io.connect('http://localhost:3000');	
+		var socket = io.connect('http://localhost:3000');
 
 		socket.on('new-message', (msg) => {
 			console.log(msg);
@@ -94,7 +97,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 					data: { name: "test" }
 				}).done( function(data) {
 					$('#replyMessage').val('');
-					$(this).attr('value', 2);	
+					$(this).attr('value', 2);
 					$( "#result" ).html( data );
 				});
 			});
@@ -108,7 +111,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 					data: { name: "test" }
 				}).done( function(data) {
 					$('#replyMessage').val('');
-					$(this).attr('value', 2);	
+					$(this).attr('value', 2);
 					$( "#result-reply" ).html( data );
 				});
 			});

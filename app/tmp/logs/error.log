@@ -14484,3 +14484,95 @@ Stack Trace:
 #1 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
 #2 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2022-09-24 18:59:36 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /messageboard/app/webroot/img/undefined
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2022-09-24 19:00:14 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /messageboard/app/webroot/img/undefined
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2022-09-24 19:00:44 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /messageboard/app/webroot/img/undefined
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2022-09-24 19:00:49 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /messageboard/app/webroot/img/undefined
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2022-09-24 19:01:18 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /messageboard/app/webroot/img/undefined
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2022-09-24 19:06:53 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /messageboard/app/webroot/img/undefined
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2022-09-24 19:08:38 Error: [MissingActionException] Action AppController::webroot() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'webroot',
+)
+Request URL: /messageboard/app/webroot/img/undefined
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2022-09-25 01:08:41 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'message_details' cannot be null
+Request URL: /messageboard/messages/newmessages/20220924434699986-images.jfif/
+Stack Trace:
+#0 C:\xampp\htdocs\messageboard\lib\Cake\Model\Datasource\DboSource.php(502): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\messageboard\lib\Cake\Model\Datasource\DboSource.php(468): DboSource->_execute('INSERT INTO `me...', Array)
+#2 C:\xampp\htdocs\messageboard\lib\Cake\Model\Datasource\DboSource.php(1132): DboSource->execute('INSERT INTO `me...')
+#3 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(1942): DboSource->create(Object(Message), Array, Array)
+#4 C:\xampp\htdocs\messageboard\lib\Cake\Model\Model.php(1760): Model->_doSave(Array, Array)
+#5 C:\xampp\htdocs\messageboard\app\Controller\MessagesController.php(266): Model->save(Array)
+#6 [internal function]: MessagesController->newmessages('202209244346999...')
+#7 C:\xampp\htdocs\messageboard\lib\Cake\Controller\Controller.php(499): ReflectionMethod->invokeArgs(Object(MessagesController), Array)
+#8 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\htdocs\messageboard\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(MessagesController), Object(CakeRequest))
+#10 C:\xampp\htdocs\messageboard\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
