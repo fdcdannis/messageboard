@@ -67,6 +67,8 @@ class MessagesController extends AppController {
 				LIMIT $limit
 		");
 
+		// pr($messages);
+
 		$this->set(compact('messages'));
     }
 
