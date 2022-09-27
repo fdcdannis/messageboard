@@ -245,6 +245,7 @@ class MessagesController extends AppController {
 				LIMIT 5
 		");
 
+		//testest
 		$this->set(compact('messages'));
     }
 
